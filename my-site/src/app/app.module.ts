@@ -15,6 +15,7 @@ import { ServicesOfferedComponent } from './components/services-offered/services
 import { MyWorkComponent } from './components/my-work/my-work.component';
 import { HeaderButtonsComponent } from './components/header/header-buttons/header-buttons.component';
 import { HeaderSocialsComponent } from './components/header/header-socials/header-socials.component';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HeaderSocialsComponent } from './components/header/header-socials/heade
     ServicesOfferedComponent,
     MyWorkComponent,
     HeaderButtonsComponent,
-    HeaderSocialsComponent
+    HeaderSocialsComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
