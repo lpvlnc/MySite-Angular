@@ -13,7 +13,7 @@
 :root {
     // color
     --color-bg: #1f1f38;
-    --color-bg-variat: #2c2c6c;
+    --color-bg-variant: #2c2c6c;
     --color-primary: #4db5ff;
     --color-primary-variant: rgba(77, 181, 255, 0.4);
     --color-white: #ffffff;
@@ -26,6 +26,7 @@
 
     --transition: all 400ms ease;
 }
+
 
 html {
     scroll-behavior: smooth;
@@ -117,9 +118,9 @@ img {
         width: var(--container-width-md);
     }
 
-    section {
-        margin-top: 6rem;
-    }
+    // section {
+    //     margin-top: 6rem;
+    // }
 }
 
 @media screen and (max-width: 600px){ 

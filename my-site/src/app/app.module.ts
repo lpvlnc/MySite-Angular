@@ -3,24 +3,27 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PortfolioComponent } from './views/portfolio/portfolio.component';
-import { AboutComponent } from './components/about/about.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { ExperienceComponent } from './components/experience/experience.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { HeaderComponent } from './components/header/header.component';
-import { TestimonialsComponent } from './components/testimonials/testimonials.component';
-import { NavComponent } from './components/nav/nav.component';
-import { ServicesOfferedComponent } from './components/services-offered/services-offered.component';
-import { MyWorkComponent } from './components/my-work/my-work.component';
-import { HeaderButtonsComponent } from './components/header/header-buttons/header-buttons.component';
-import { HeaderSocialsComponent } from './components/header/header-socials/header-socials.component';
+import { HomeComponent } from './views/home/home.component';
+import { AboutComponent } from './components/home/about/about.component';
+import { ContactComponent } from './components/home/contact/contact.component';
+import { ExperienceComponent } from './components/home/experience/experience.component';
+import { FooterComponent } from './components/home/footer/footer.component';
+import { HeaderComponent } from './components/home/header/header.component';
+import { TestimonialsComponent } from './components/home/testimonials/testimonials.component';
+import { NavComponent } from './components/home/nav/nav.component';
+import { ServicesOfferedComponent } from './components/home/services-offered/services-offered.component';
+import { MyWorkComponent } from './components/home/my-work/my-work.component';
 import { ButtonComponent } from './components/button/button.component';
+import { HeaderSocialsComponent } from './components/home/header/header-me/header-socials/header-socials.component';
+import { HeaderButtonsComponent } from './components/home/header/header-buttons/header-buttons.component';
+import { HeaderIntroductionComponent } from './components/home/header/header-introduction/header-introduction.component';
+import { HeaderMeComponent } from './components/home/header/header-me/header-me.component';
+import { AboutCardComponent } from './components/home/about/about-card/about-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PortfolioComponent,
+    HomeComponent,
     AboutComponent,
     ContactComponent,
     ExperienceComponent,
@@ -30,9 +33,12 @@ import { ButtonComponent } from './components/button/button.component';
     NavComponent,
     ServicesOfferedComponent,
     MyWorkComponent,
-    HeaderButtonsComponent,
+    ButtonComponent,
     HeaderSocialsComponent,
-    ButtonComponent
+    HeaderButtonsComponent,
+    HeaderIntroductionComponent,
+    HeaderMeComponent,
+    AboutCardComponent
   ],
   imports: [
     BrowserModule,
