@@ -1,16 +1,7 @@
-.about-container {
-    display: grid;
-    grid-template-columns: 35% 50%;
-    gap: 15%;
-}
-
 .about-me {
-    width: 100%;
-    aspect-ratio: 1/1;
     border-radius: 2rem;
     background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
-    display: grid;
-    place-items: center;
+    transition: var(--transition);
 }
 
 .about-me-image {
@@ -24,8 +15,20 @@
     transform: rotate(0);
 }
 
-.about-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+.spacer {
+    color: var(--color-primary);
+}
+
+.hr {
+    height: 75%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.hr-container {
+    height: 100%;
+}
+
+.button-container {
+    bottom: 0;
 }

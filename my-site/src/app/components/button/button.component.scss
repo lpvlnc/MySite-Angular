@@ -1,0 +1,33 @@
+.custom-btn {
+    color: var(--color-primary);
+    border-radius:  0.4rem;
+    cursor: pointer;
+    border: 1px solid var(--color-primary);
+    transition: var(--transition);
+    width: 10rem;
+}
+
+.custom-btn:hover {
+    background: var(--color-white);
+    color: var(--color-bg);
+    border-color: transparent;
+}
+
+.custom-btn:hover a {
+    color: var(--color-primary);
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: var(--color-bg);
+}
+
+
+.btn-primary a {
+    color: var(--color-white);
+}
+
+.btn-primary:hover a {
+    color: var(--color-primary);
+}
+

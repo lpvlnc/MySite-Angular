@@ -1,2 +1,3 @@
-<a *ngIf="type == 'default'" class="btn" href="{{href}}">{{label}}</a>
-<a *ngIf="type == 'primary'" class="btn btn-primary" href="{{href}}">{{label}}</a>
+<div [ngClass]="type == 'default' ? 'btn custom-btn py-3' : 'btn custom-btn btn-primary py-3'" >
+    <a  href="{{href}}">{{label}}</a>
+</div>
