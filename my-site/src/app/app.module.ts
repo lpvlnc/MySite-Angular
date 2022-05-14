@@ -19,6 +19,7 @@ import { HeaderButtonsComponent } from './components/home/header/header-buttons/
 import { HeaderIntroductionComponent } from './components/home/header/header-introduction/header-introduction.component';
 import { HeaderMeComponent } from './components/home/header/header-me/header-me.component';
 import { AboutCardComponent } from './components/home/about/about-card/about-card.component';
+import { ExperienceCardComponent } from './components/home/experience/experience-card/experience-card.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AboutCardComponent } from './components/home/about/about-card/about-car
     HeaderButtonsComponent,
     HeaderIntroductionComponent,
     HeaderMeComponent,
-    AboutCardComponent
+    AboutCardComponent,
+    ExperienceCardComponent
   ],
   imports: [
     BrowserModule,

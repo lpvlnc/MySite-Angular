@@ -1,0 +1,20 @@
+<article class="custom-card">
+    <div class="container">
+        <div class="row mt-4 mb-4">
+            <div class="col-12">
+                <h1>{{title}}</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <ul>
+                    <li *ngFor="let experience of experiences">
+                        <i class="fa-solid fa-certificate"></i>
+                        <h5>{{experience.technology}}</h5>
+                        <small>{{experience.experience}}</small>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</article>

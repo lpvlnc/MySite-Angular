@@ -1,6 +1,7 @@
 .about-me {
     border-radius: 2rem;
-    background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
+    background: var(--color-primary);
+    //background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
     transition: var(--transition);
 }
 
@@ -11,12 +12,13 @@
     transition: var(--transition);
 }
 
+
 .about-me-image:hover {
-    transform: rotate(0);
+    transform: rotate(0deg);
 }
 
 .spacer {
-    color: var(--color-primary);
+    color: var(--color-light);
 }
 
 .hr {
