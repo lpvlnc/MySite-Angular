@@ -13,7 +13,5 @@ export class ExperienceCardComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void { }
 }

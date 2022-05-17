@@ -43,16 +43,13 @@ export class ExperienceComponent implements OnInit {
     {
       technology: 'typeScript',
       experience: 'Intermediate'
-    },
-    {
-      technology: 'Unity',
-      experience: 'Intermediate'
     }
   ];
 
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

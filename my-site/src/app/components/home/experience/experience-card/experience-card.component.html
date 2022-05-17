@@ -6,14 +6,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
-                <ul>
-                    <li *ngFor="let experience of experiences">
-                        <i class="fa-solid fa-certificate"></i>
-                        <h5>{{experience.technology}}</h5>
-                        <small>{{experience.experience}}</small>
-                    </li>
-                </ul>
+            <div class="col-6 mb-4" *ngFor="let experience of experiences; index as i">
+                <h5 class="mb-0">{{experience.technology}}</h5>
+                <small>{{experience.experience}}</small>
             </div>
         </div>
     </div>

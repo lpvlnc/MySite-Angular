@@ -12,7 +12,6 @@ import { HeaderComponent } from './components/home/header/header.component';
 import { TestimonialsComponent } from './components/home/testimonials/testimonials.component';
 import { NavComponent } from './components/home/nav/nav.component';
 import { ServicesOfferedComponent } from './components/home/services-offered/services-offered.component';
-import { MyWorkComponent } from './components/home/my-work/my-work.component';
 import { ButtonComponent } from './components/button/button.component';
 import { HeaderSocialsComponent } from './components/home/header/header-me/header-socials/header-socials.component';
 import { HeaderButtonsComponent } from './components/home/header/header-buttons/header-buttons.component';
@@ -20,6 +19,8 @@ import { HeaderIntroductionComponent } from './components/home/header/header-int
 import { HeaderMeComponent } from './components/home/header/header-me/header-me.component';
 import { AboutCardComponent } from './components/home/about/about-card/about-card.component';
 import { ExperienceCardComponent } from './components/home/experience/experience-card/experience-card.component';
+import { PortfolioComponent } from './components/home/portfolio/portfolio.component';
+import { PortfolioItemComponent } from './components/home/portfolio/portfolio-item/portfolio-item.component';
 
 @NgModule({
   declarations: [
@@ -33,14 +34,15 @@ import { ExperienceCardComponent } from './components/home/experience/experience
     TestimonialsComponent,
     NavComponent,
     ServicesOfferedComponent,
-    MyWorkComponent,
+    PortfolioComponent,
     ButtonComponent,
     HeaderSocialsComponent,
     HeaderButtonsComponent,
     HeaderIntroductionComponent,
     HeaderMeComponent,
     AboutCardComponent,
-    ExperienceCardComponent
+    ExperienceCardComponent,
+    PortfolioItemComponent
   ],
   imports: [
     BrowserModule,
