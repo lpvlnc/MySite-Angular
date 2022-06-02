@@ -14,7 +14,6 @@
 :root {
     // color
     --color-bg: #02021a;
-    //--color-primary: #4db5ff;
     --color-primary: hsla(0, 0%, 0%, 0.300);
     --color-secondary: hsla(0, 0%, 0%, 0.100);
     --color-primary-variant: rgba(77, 181, 255, 0.4);
@@ -90,7 +89,7 @@ a:hover {
     min-width: 160px;
 }
 
-.custom-card:hover {
+.custom-card-hover:hover {
     background: var(--color-secondary);
     cursor: default;
 }

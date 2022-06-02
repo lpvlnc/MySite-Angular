@@ -20,7 +20,8 @@ import { HeaderMeComponent } from './components/home/header/header-me/header-me.
 import { AboutCardComponent } from './components/home/about/about-card/about-card.component';
 import { ExperienceCardComponent } from './components/home/experience/experience-card/experience-card.component';
 import { PortfolioComponent } from './components/home/portfolio/portfolio.component';
-import { PortfolioItemComponent } from './components/home/portfolio/portfolio-item/portfolio-item.component';
+import { PortfolioCardComponent } from './components/home/portfolio/portfolio-card/portfolio-card.component';
+import { PortfolioCardOverlayComponent } from './components/home/portfolio/portfolio-card-overlay/portfolio-card-overlay.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { PortfolioItemComponent } from './components/home/portfolio/portfolio-it
     HeaderMeComponent,
     AboutCardComponent,
     ExperienceCardComponent,
-    PortfolioItemComponent
+    PortfolioCardComponent,
+    PortfolioCardOverlayComponent
   ],
   imports: [
     BrowserModule,
