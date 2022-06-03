@@ -7,12 +7,14 @@
     cursor: default;
     border: 1px solid transparent;
     border-radius: 1rem;
+    background-image: linear-gradient(transparent 75%, rgba(0, 0, 0, 0.7));
 }
 
 .overlay-container:hover {
-    transition: backdrop-filter var(--transition);
     backdrop-filter: blur(5px) opacity(1);
+    background-image: none;
 }
+
 
 .overlay-container > .title {
     transform: translateY(140px);
@@ -45,6 +47,10 @@ i:hover {
     color: var(--color-white);
 }
 
+.disabled:hover {
+    color: var(--color-light);
+}
+
 .description {
     display: flex;
     flex-direction: row;
@@ -63,4 +69,10 @@ small {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+::ng-deep .mat-tooltip {
+    /* your own custom styles here */ 
+    /* e.g. */
+    background-color: var(--color-bg);
+    color: var(--color-light) !important;
 }
