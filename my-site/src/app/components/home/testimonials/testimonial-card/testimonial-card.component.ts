@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-testimonial-card',
@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestimonialCardComponent implements OnInit {
 
+  @Input() active: string = '';
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.active);
   }
 
 }

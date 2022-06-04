@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 @import '~bootstrap/scss/bootstrap';
+@import '~swiper/scss';
+@import '~swiper/scss/autoplay';
+@import '~swiper/scss/pagination';
+@import '~swiper/scss/navigation';
 
 * {
     margin: 0;
@@ -31,6 +35,7 @@
 
 html {
     scroll-behavior: smooth;
+    user-select: none;
 }
 
 ::-webkit-scrollbar {
@@ -75,6 +80,7 @@ a {
     color: var(--color-primary);
     transition: var(--transition);
     text-decoration: none;
+    cursor: pointer;
 }
 
 a:hover {
@@ -110,3 +116,12 @@ small {
 h5 {
     font-size: 0.95rem;
 }
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    $sizes: ( 25: 25%, 50: 50%, 75: 75%, 100: 100%, );
+    @each $size, $length in $sizes {
+      @include media-breakpoint-up($breakpoint) {
+        .w-#{$breakpoint}-#{$size} {width: $length !important;}
+      }
+    }
+  }

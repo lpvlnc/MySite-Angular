@@ -5,5 +5,12 @@
             <h3>From my clients and coworkers</h3>
         </div>
     </div>
-    <app-testimonial-card></app-testimonial-card>
+    <swiper [config]="swiperConfig">
+        <ng-template swiperSlide>
+            <app-testimonial-card></app-testimonial-card>
+        </ng-template>
+        <ng-template swiperSlide>
+            <app-testimonial-card></app-testimonial-card>
+        </ng-template>
+    </swiper>
 </section>
