@@ -11,7 +11,7 @@ export class ButtonComponent implements OnInit {
    */
   @Input() label: string = '';
 
-  @Input() type: string = 'default';
+  @Input() customButton: string = 'default';
 
   @Input() href: string = '';
 

@@ -7,11 +7,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TestimonialCardComponent implements OnInit {
 
-  @Input() active: string = '';
+  @Input() testimonial: any;
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.active);
+    console.log(this.testimonial.name);
   }
 
 }

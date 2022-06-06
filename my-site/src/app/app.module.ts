@@ -27,6 +27,7 @@ import { PortfolioComponent } from './components/home/portfolio/portfolio.compon
 import { PortfolioCardComponent } from './components/home/portfolio/portfolio-card/portfolio-card.component';
 import { PortfolioCardOverlayComponent } from './components/home/portfolio/portfolio-card-overlay/portfolio-card-overlay.component';
 import { TestimonialCardComponent } from './components/home/testimonials/testimonial-card/testimonial-card.component';
+import { ContactCardComponent } from './components/home/contact/contact-card/contact-card.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { TestimonialCardComponent } from './components/home/testimonials/testimo
     ExperienceCardComponent,
     PortfolioCardComponent,
     PortfolioCardOverlayComponent,
-    TestimonialCardComponent
+    TestimonialCardComponent,
+    ContactCardComponent
   ],
   imports: [
     BrowserModule,

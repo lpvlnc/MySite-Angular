@@ -1,25 +1,27 @@
-<div class="row d-flex justify-content-center mb-5">
-    <div class="custom-card w-lg-50 col-12">
-        <div class="row">
-            <div class="col-12">
-                <img class="testimonial-profile-pic" src="../../../../../assets/testimonial-profile-pic/avatar2.jpg" alt="">
+<div class="container">
+    <div class="row d-flex justify-content-center mb-5">
+        <div class="custom-card w-lg-50 col-12">
+            <div class="row">
+                <div class="col-12 d-none d-sm-block">
+                    <img class="testimonial-profile-pic" src={{testimonial.profilePic}} alt="">
+                </div>
             </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-12">
-                <h1 class="mb-0">Leonardo Pinheiro Valença</h1>
+            
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="mb-0">{{testimonial.name}}</h1>
+                </div>
             </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col-12">
-                <small>Client/Coworker</small>
+            <div class="row mb-2">
+                <div class="col-12">
+                    <small>{{testimonial.relationship}}</small>
+                </div>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12 testimonial">
-                <small>&nbsp;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore eum ea sapiente mollitia voluptate culpa, consequuntur aliquam sint eaque. Temporibus consectetur quod facilis suscipit, cum voluptates nihil consequuntur laboriosam odio?</small>
+    
+            <div class="row">
+                <div class="col-12 testimonial">
+                    <small>&nbsp;{{testimonial.message}}</small>
+                </div>
             </div>
         </div>
     </div>

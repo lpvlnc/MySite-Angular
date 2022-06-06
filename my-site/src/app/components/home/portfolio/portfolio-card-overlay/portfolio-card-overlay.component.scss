@@ -45,8 +45,8 @@ i:hover {
     color: var(--color-white);
 }
 
-.disabled:hover {
-    color: var(--color-light);
+.disabled, .disabled:hover {
+    color: var(--color-disabled);
 }
 
 .links {
@@ -61,10 +61,4 @@ small {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-::ng-deep .mat-tooltip {
-    /* your own custom styles here */ 
-    /* e.g. */
-    background-color: var(--color-bg);
-    color: var(--color-light) !important;
 }

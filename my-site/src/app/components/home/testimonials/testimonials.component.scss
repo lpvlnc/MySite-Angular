@@ -1,7 +1,13 @@
 .swiper-button-next, .swiper-button-prev {
     color: var(--color-light);
+    display: none;
 }
 
 .swiper-pagination-bullet {
     background-color: var(--color-light) !important;
+}
+@media (min-width: 992px) {
+    .swiper-button-next, .swiper-button-prev {
+        display: flex;
+      }
 }

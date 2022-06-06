@@ -6,11 +6,8 @@
         </div>
     </div>
     <swiper [config]="swiperConfig">
-        <ng-template swiperSlide>
-            <app-testimonial-card></app-testimonial-card>
-        </ng-template>
-        <ng-template swiperSlide>
-            <app-testimonial-card></app-testimonial-card>
+        <ng-template swiperSlide *ngFor="let testimonial of testimonials">
+            <app-testimonial-card [testimonial]="testimonial"></app-testimonial-card>
         </ng-template>
     </swiper>
 </section>

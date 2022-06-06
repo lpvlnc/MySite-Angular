@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectModel } from 'src/app/models/portfolio';
 
 @Component({
   selector: 'app-portfolio',
@@ -8,6 +9,25 @@ import { Component, OnInit } from '@angular/core';
 export class PortfolioComponent implements OnInit {
 
   constructor() { }
+
+  projects: ProjectModel[] = [
+    {
+      title: "[project title]",
+      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum nesciunt saepe laborum hic! Commodi eius impedit eum doloremque omnis, repellendus totam. Architecto iure omnis, hic quaerat delectus iusto voluptas veniam."
+    },
+    {
+      title: "[project title]",
+      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum nesciunt saepe laborum hic! Commodi eius impedit eum doloremque omnis, repellendus totam. Architecto iure omnis, hic quaerat delectus iusto voluptas veniam."
+    },
+    {
+      title: "[project title]",
+      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum nesciunt saepe laborum hic! Commodi eius impedit eum doloremque omnis, repellendus totam. Architecto iure omnis, hic quaerat delectus iusto voluptas veniam."
+    },
+    {
+      title: "[project title]",
+      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum nesciunt saepe laborum hic! Commodi eius impedit eum doloremque omnis, repellendus totam. Architecto iure omnis, hic quaerat delectus iusto voluptas veniam."
+    }
+  ];
 
   ngOnInit(): void {
   }

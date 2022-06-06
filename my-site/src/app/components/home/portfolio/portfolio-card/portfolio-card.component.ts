@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ProjectModel } from 'src/app/models/portfolio';
 
 @Component({
   selector: 'app-portfolio-card',
@@ -7,8 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PortfolioCardComponent implements OnInit {
 
-  @Input() title: string = '';
-  @Input() description: string = '';
+  @Input() project: ProjectModel = {
+    title: '[project title]',
+    description: '[project description]'
+  };
 
   constructor() { }
 
