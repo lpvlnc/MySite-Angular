@@ -13,6 +13,13 @@ input, textarea {
     color: var(--color-white);
 }
 
+input:focus, textarea:focus {
+    border-color: var(--color-bg-blur-aqua);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px var(--color-bg-blur-aqua);
+    outline: 0 none;
+}
+
+
 ::placeholder {
     color: var(--color-light);
 }

@@ -122,7 +122,9 @@ h5 {
     $sizes: ( 25: 25%, 50: 50%, 75: 75%, 100: 100%, );
     @each $size, $length in $sizes {
       @include media-breakpoint-up($breakpoint) {
-        .w-#{$breakpoint}-#{$size} {width: $length !important;}
-      }
+            .w-#{$breakpoint}-#{$size} {
+                width: $length !important;
+            }
+        }
     }
-  }
+}

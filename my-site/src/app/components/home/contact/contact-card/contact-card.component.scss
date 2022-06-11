@@ -53,3 +53,25 @@ h5 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+a {
+  position: relative;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--color-light);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: var(--transition);
+}
+
+a:hover::after {
+  background: var(--color-white);
+  transform: scaleX(1);
+}
