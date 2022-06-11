@@ -8,9 +8,10 @@ import { Clipboard } from '@angular/cdk/clipboard';
 })
 export class ContactCardComponent implements OnInit {
 
-  @Input() icon: string = '';
-  @Input() title: string = '';
-  @Input() content: string = '';
+  @Input() icon: string = '[icon]';
+  @Input() title: string = '[title]';
+  @Input() content: string = '[content]';
+  @Input() contactLink: string = 'contactLink';
 
   constructor(private clipboard: Clipboard) { }
 

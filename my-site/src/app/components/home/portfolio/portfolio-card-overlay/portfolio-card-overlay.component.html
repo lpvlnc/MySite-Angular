@@ -2,13 +2,13 @@
     
     <div class="row mt-3 title">
         <div class="col-12">
-            <h5>{{title}}</h5>
+            <h5>{{project.title}}</h5>
         </div>
     </div>
 
     <div class="row description px-4">
         <div class="col-12">
-            <small>{{description}}</small>
+            <small>{{project.description}}</small>
         </div>
     </div>
 
@@ -16,17 +16,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-4">
-                    <a href="{{githubLink}}" target="_blank" matTooltip="See on Github">
+                    <a href="{{project.github}}" target="_blank" matTooltip="See on Github">
                         <i class="fa-brands fa-github" ></i>
                     </a>
                 </div>
                 <div class="col-4">
-                    <a target="_blank" matTooltip="Live demo">
+                    <a href="{{project.build}}" target="_blank" matTooltip="Live demo">
                         <i class="fa-solid fa-rocket disabled"></i>
                     </a>
                 </div>
                 <div class="col-4">
-                    <a class="link" href="{{githubLink}}" target="_blank" matTooltip="Details">
+                    <a class="link" href="{{project.build}}" target="_blank" matTooltip="Details">
                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>

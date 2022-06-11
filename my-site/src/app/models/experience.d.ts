@@ -5,5 +5,5 @@ export class ExperienceListModel {
 
 export class ExperienceModel {
     technology: string;
-    experience: string;
+    level: string;
 }

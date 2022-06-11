@@ -9,12 +9,12 @@
         <div class="col-12 col-md-4 mb-2">
             <div class="row mb-2">
                 <div class="col-12">
-                    <app-contact-card icon="fa-solid fa-envelope" title="Email" content="lpvalenca@hotmail.com"></app-contact-card>
+                    <app-contact-card icon="fa-solid fa-envelope" title="Email" content="{{contact.email}}" contactLink="{{contact.emailLink}}"></app-contact-card>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <app-contact-card icon="fa-brands fa-whatsapp" title="WhatsApp" content="(51) 9 9382-2341"></app-contact-card>
+                    <app-contact-card icon="fa-brands fa-whatsapp" title="WhatsApp" content="{{getPhone()}}" contactLink="{{contact.whatsappLink}}"></app-contact-card>
                 </div>
             </div>
         </div>

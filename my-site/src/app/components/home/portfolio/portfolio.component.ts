@@ -12,20 +12,28 @@ export class PortfolioComponent implements OnInit {
 
   projects: ProjectModel[] = [
     {
-      title: "[project title]",
-      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum nesciunt saepe laborum hic! Commodi eius impedit eum doloremque omnis, repellendus totam. Architecto iure omnis, hic quaerat delectus iusto voluptas veniam."
+      title: '[project title]',
+      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum nesciunt saepe laborum hic! Commodi eius impedit eum doloremque omnis, repellendus totam. Architecto iure omnis, hic quaerat delectus iusto voluptas veniam.',
+      github: 'https://github.com/lpvlnc',
+      build: 'build'
     },
     {
-      title: "[project title]",
-      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum nesciunt saepe laborum hic! Commodi eius impedit eum doloremque omnis, repellendus totam. Architecto iure omnis, hic quaerat delectus iusto voluptas veniam."
+      title: '[project title]',
+      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum nesciunt saepe laborum hic! Commodi eius impedit eum doloremque omnis, repellendus totam. Architecto iure omnis, hic quaerat delectus iusto voluptas veniam.',
+      github: 'https://github.com/lpvlnc',
+      build: 'build'
     },
     {
-      title: "[project title]",
-      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum nesciunt saepe laborum hic! Commodi eius impedit eum doloremque omnis, repellendus totam. Architecto iure omnis, hic quaerat delectus iusto voluptas veniam."
+      title: '[project title]',
+      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum nesciunt saepe laborum hic! Commodi eius impedit eum doloremque omnis, repellendus totam. Architecto iure omnis, hic quaerat delectus iusto voluptas veniam.',
+      github: 'https://github.com/lpvlnc',
+      build: 'build'
     },
     {
-      title: "[project title]",
-      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum nesciunt saepe laborum hic! Commodi eius impedit eum doloremque omnis, repellendus totam. Architecto iure omnis, hic quaerat delectus iusto voluptas veniam."
+      title: '[project title]',
+      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum nesciunt saepe laborum hic! Commodi eius impedit eum doloremque omnis, repellendus totam. Architecto iure omnis, hic quaerat delectus iusto voluptas veniam.',
+      github: 'https://github.com/lpvlnc',
+      build: 'build'
     }
   ];
 

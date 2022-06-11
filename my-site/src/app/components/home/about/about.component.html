@@ -8,7 +8,7 @@
     <div class="row mt-2">
         <div class="col-12 d-flex justify-content-center">
             <p>
-                &nbsp;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro reprehenderit exercitationem dolor, pariatur quasi incidunt quisquam nihil alias at fugit, nostrum iste corporis voluptate itaque excepturi labore dolorum delectus accusamus.
+                &nbsp;{{about.description}}
             </p>
         </div>
     </div>
@@ -28,13 +28,13 @@
         <div class="col-12 col-lg-12 col-xl-5 mt-4 mt-lg-5 mt-xl-0 d-xl-flex align-items-center justify-content-center mx-0">
             <div class="row">
                 <div class="col-12 col-lg-6 col-xl-12 mb-2"> 
-                    <app-about-card icon="fa-solid fa-award" title="Experience" description="1+ Years"></app-about-card>
+                    <app-about-card icon="fa-solid fa-award" title="Experience" description="{{about.yearsOfExperience}}+ Years"></app-about-card>
                 </div>
                 <div class="col-12 col-lg-6 col-xl-12 mb-2">
-                    <app-about-card icon="fa-solid fa-users" title="Clients" description="0+"></app-about-card>
+                    <app-about-card icon="fa-solid fa-users" title="Clients" description="{{about.clients}}+"></app-about-card>
                 </div>
                 <div class="col-12 mb-2">
-                    <app-about-card icon="fa-solid fa-folder-plus" title="Projects" description="0+"></app-about-card>
+                    <app-about-card icon="fa-solid fa-folder-plus" title="Projects" description="{{about.projects}}+"></app-about-card>
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-<article class="custom-card custom-card-hover flip-card" (click)="copyContent()">
+<article class="custom-card flip-card">
     <div class="container">
         <div class="row">
             <div class="col-12 mt-1">
@@ -10,13 +10,13 @@
                         <h5 class="mb-0">{{title}}</h5>
                     </div>
                     <div class="flip-card-back">
-                        <h5 class="mb-0">{{content}}</h5>
+                        <h5 class="mb-0" (click)="copyContent()" matTooltip="Click to copy" matTooltipPosition="above">{{content}}</h5>
                     </div>
                 </div>
             </div>
             <div class="col-12">
-                <a href="#contact" class="link">
-                    <small>send me a message</small>
+                <a class="link" href="{{contactLink}}" target="_blank">
+                    <small>contact me</small>
                 </a>
             </div>
         </div>

@@ -1,4 +1,3 @@
-import { transition, trigger, useAnimation } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { ExperienceModel } from 'src/app/models/experience';
 
@@ -9,43 +8,41 @@ import { ExperienceModel } from 'src/app/models/experience';
 })
 export class ExperienceComponent implements OnInit {
 
-  fadeInUp: any;
-
   backendExperiences: ExperienceModel[] = [
     {
       technology: 'C#',
-      experience: 'Experienced'
+      level: 'Experienced'
     },
     {
       technology: 'ASP.NET CORE',
-      experience: 'Experienced'
+      level: 'Experienced'
     },
     {
       technology: 'Java',
-      experience: 'Experienced'
+      level: 'Experienced'
     },
     {
       technology: 'Unity',
-      experience: 'Intermediate'
+      level: 'Intermediate'
     }
   ];
 
   frontendExperiences: ExperienceModel[] = [
     {
       technology: 'HTML',
-      experience: 'Experienced'
+      level: 'Experienced'
     },
     {
       technology: 'CSS',
-      experience: 'Intermediate'
+      level: 'Intermediate'
     },
     {
       technology: 'JavaScript',
-      experience: 'Intermediate'
+      level: 'Intermediate'
     },
     {
       technology: 'Angular',
-      experience: 'Intermediate'
+      level: 'Intermediate'
     }
   ];
 

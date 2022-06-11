@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ProjectModel } from 'src/app/models/portfolio';
 
 @Component({
   selector: 'app-portfolio-card-overlay',
@@ -7,9 +8,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PortfolioCardOverlayComponent implements OnInit {
 
-  githubLink: string = 'https://github.com/lpvlnc'
-  @Input() title: string = '';
-  @Input() description: string = '';
+  @Input() project: ProjectModel = {
+    title: '[project title]',
+    description: '[project description]',
+    github: '[project github]',
+    build: '[project build]'
+  };
   constructor() { }
 
   ngOnInit(): void {

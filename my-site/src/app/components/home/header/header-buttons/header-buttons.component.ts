@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header-buttons',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header-buttons.component.scss']
 })
 export class HeaderButtonsComponent implements OnInit {
+
+  @Input() cvDownload: string = '[cv download]'
 
   constructor() { }
 

@@ -10,7 +10,9 @@ export class PortfolioCardComponent implements OnInit {
 
   @Input() project: ProjectModel = {
     title: '[project title]',
-    description: '[project description]'
+    description: '[project description]',
+    github: '[project github]',
+    build: '[project build]'
   };
 
   constructor() { }
