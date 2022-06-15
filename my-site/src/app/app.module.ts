@@ -18,7 +18,6 @@ import { NavComponent } from './components/home/nav/nav.component';
 import { ServicesOfferedComponent } from './components/home/services-offered/services-offered.component';
 import { ButtonComponent } from './components/button/button.component';
 import { MeSocialsComponent } from './components/home/me/me-details/me-socials/me-socials.component';
-import { HeaderButtonsComponent } from './components/home/me/header-buttons/header-buttons.component';
 import { MeIntroductionComponent } from './components/home/me/me-introduction/me-introduction.component';
 import { MeDetailsComponent } from './components/home/me/me-details/me-details.component';
 import { AboutCardComponent } from './components/home/about/about-card/about-card.component';
@@ -44,7 +43,6 @@ import { ContactCardComponent } from './components/home/contact/contact-card/con
     PortfolioComponent,
     ButtonComponent,
     MeSocialsComponent,
-    HeaderButtonsComponent,
     MeIntroductionComponent,
     MeDetailsComponent,
     AboutCardComponent,
