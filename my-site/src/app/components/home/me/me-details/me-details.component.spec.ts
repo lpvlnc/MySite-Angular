@@ -1,20 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MeDetailsComponent } from './me-details.component';
 
-import { HeaderSocialsComponent } from './header-socials.component';
-
-describe('HeaderSocialsComponent', () => {
-  let component: HeaderSocialsComponent;
-  let fixture: ComponentFixture<HeaderSocialsComponent>;
+describe('MeDetailsComponent', () => {
+  let component: MeDetailsComponent;
+  let fixture: ComponentFixture<MeDetailsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeaderSocialsComponent ]
+      declarations: [ MeDetailsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeaderSocialsComponent);
+    fixture = TestBed.createComponent(MeDetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

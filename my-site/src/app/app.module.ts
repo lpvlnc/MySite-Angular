@@ -12,15 +12,15 @@ import { AboutComponent } from './components/home/about/about.component';
 import { ContactComponent } from './components/home/contact/contact.component';
 import { ExperienceComponent } from './components/home/experience/experience.component';
 import { FooterComponent } from './components/home/footer/footer.component';
-import { HeaderComponent } from './components/home/header/header.component';
+import { MeComponent } from './components/home/me/me.component';
 import { TestimonialsComponent } from './components/home/testimonials/testimonials.component';
 import { NavComponent } from './components/home/nav/nav.component';
 import { ServicesOfferedComponent } from './components/home/services-offered/services-offered.component';
 import { ButtonComponent } from './components/button/button.component';
-import { HeaderSocialsComponent } from './components/home/header/header-me/header-socials/header-socials.component';
-import { HeaderButtonsComponent } from './components/home/header/header-buttons/header-buttons.component';
-import { HeaderIntroductionComponent } from './components/home/header/header-introduction/header-introduction.component';
-import { HeaderMeComponent } from './components/home/header/header-me/header-me.component';
+import { MeSocialsComponent } from './components/home/me/me-details/me-socials/me-socials.component';
+import { HeaderButtonsComponent } from './components/home/me/header-buttons/header-buttons.component';
+import { MeIntroductionComponent } from './components/home/me/me-introduction/me-introduction.component';
+import { MeDetailsComponent } from './components/home/me/me-details/me-details.component';
 import { AboutCardComponent } from './components/home/about/about-card/about-card.component';
 import { ExperienceCardComponent } from './components/home/experience/experience-card/experience-card.component';
 import { PortfolioComponent } from './components/home/portfolio/portfolio.component';
@@ -37,16 +37,16 @@ import { ContactCardComponent } from './components/home/contact/contact-card/con
     ContactComponent,
     ExperienceComponent,
     FooterComponent,
-    HeaderComponent,
+    MeComponent,
     TestimonialsComponent,
     NavComponent,
     ServicesOfferedComponent,
     PortfolioComponent,
     ButtonComponent,
-    HeaderSocialsComponent,
+    MeSocialsComponent,
     HeaderButtonsComponent,
-    HeaderIntroductionComponent,
-    HeaderMeComponent,
+    MeIntroductionComponent,
+    MeDetailsComponent,
     AboutCardComponent,
     ExperienceCardComponent,
     PortfolioCardComponent,

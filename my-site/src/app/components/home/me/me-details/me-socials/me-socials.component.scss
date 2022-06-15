@@ -1,4 +1,4 @@
-.header-socials {
+.me-socials {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,22 +9,16 @@
     top: 23rem;
 }
 
-.header-socials::before {
+.me-socials::before {
     content: '';
     width: 1px;
     height: 1rem;
     background: var(--color-primary);
 }
 
-.header-socials::after {
+.me-socials::after {
     content: '';
     width: 1px;
     height: 1rem;
     background: var(--color-primary);
-}
-
-@media screen and (max-width: 600px) {
-    .header-socials{
-        display: none;
-    }
 }

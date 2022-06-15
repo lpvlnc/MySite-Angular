@@ -1,4 +1,4 @@
-export interface HeaderModel {
+export interface MeModel {
     name: string;
     description: string;
     cv: string;

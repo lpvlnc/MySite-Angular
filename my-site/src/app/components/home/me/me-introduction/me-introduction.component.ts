@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-header-introduction',
-  templateUrl: './header-introduction.component.html',
-  styleUrls: ['./header-introduction.component.scss']
+  selector: 'app-me-introduction',
+  templateUrl: './me-introduction.component.html',
+  styleUrls: ['./me-introduction.component.scss']
 })
-export class HeaderIntroductionComponent implements OnInit {
+export class MeIntroductionComponent implements OnInit {
 
   @Input() name: string = '[name]';
   @Input() description: string = '[description]';
