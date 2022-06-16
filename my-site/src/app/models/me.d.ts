@@ -4,3 +4,9 @@ export interface MeModel {
     cv: string;
     picture: string;
 }
+
+export interface Social {
+    name: string;
+    link: string;
+    icon: string;
+}

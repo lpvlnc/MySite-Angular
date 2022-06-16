@@ -1,1 +1,30 @@
-<section id="footer" class="container pt-5">Footer</section>
+<footer id="footer" class="mt-4 p-5">
+    <a href="#" class="footer_logo mb-4">VALENÇA</a>
+    <ul class="permaLinks mb-4">
+        <li>
+            <a href="home#me">Home</a>
+        </li>
+        <a href="home#about">About</a>
+        <li>
+            <a href="home#experience">Experience</a>
+        </li>
+        <li>
+            <a href="home#portfolio">Portfolio</a>
+        </li>
+        <li>
+            <a href="home#testimonials">Testimonials</a>
+        </li>
+    </ul>
+
+    <div class="col-12 footer_socials mb-4">
+        <a *ngFor="let social of socials"
+            href="{{social.link}}" 
+            target="_blank" 
+            matTooltip="{{social.name}}" 
+            matTooltipPosition="below">
+            <i class="{{social.icon}}"></i>
+        </a>
+    </div>
+
+    <small>&copy; VALENÇA. All rights reserved.</small>
+</footer>
