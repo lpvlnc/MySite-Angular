@@ -14,9 +14,15 @@ export class NavComponent implements OnInit {
     paths: 'exact',
     fragment: 'exact'
   }
+
+  public hide: boolean = false;
   
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  hideNavbar(): void {
+    this.hide = !this.hide;
   }
 }

@@ -1,5 +1,5 @@
-<div class="d-none d-sm-flex justify-content-center">
-    <nav>
+<div class="d-none d-sm-flex">
+    <nav [ngClass]="hide ? 'hide' : ''">
         <a routerLink="/home" 
            fragment="me" 
            routerLinkActive="active" 
@@ -29,6 +29,10 @@
            routerLinkActive="active"
            [routerLinkActiveOptions]="linkActiveOptions">
            <i class="fa-solid fa-users"></i>
+        </a>
+        <a class="arrow" (click)="hideNavbar()">
+            <i *ngIf="hide" class="fa-solid fa-angle-right"></i>
+            <i *ngIf="!hide" class="fa-solid fa-angle-left"></i>
         </a>
     </nav>
 </div>

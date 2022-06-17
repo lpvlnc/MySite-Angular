@@ -18,7 +18,7 @@ footer a:hover {
     display: inline-block;
 }
 
-.permaLinks {
+.permalinks {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -34,4 +34,11 @@ footer a:hover {
 
 i:hover {
     color: var(--color-white);
+}
+
+@media screen and (max-width: 600px) {
+    .permalinks {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
 }

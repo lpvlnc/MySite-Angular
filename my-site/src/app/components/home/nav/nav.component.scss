@@ -11,6 +11,9 @@ nav {
     border-radius: 3rem;
     backdrop-filter: blur(10px);
     z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 400ms;
 }
 
 nav a {
@@ -23,10 +26,26 @@ nav a {
 }
 
 nav a:hover {
-    background: rgba(0, 0, 0, 0.3);
+    background: var(--color-primary);
 }
 
 nav a.active {
-    background: var(--color-primary);
     color: var(--color-white);
+}
+
+.hide {
+    left: 0;
+    transform: translateX(0%);
+}
+
+.hide a {
+    display: none;
+}
+
+.hide > .arrow {
+    display: flex;
+}
+
+.hide > a.active {
+    display: flex;
 }

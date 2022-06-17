@@ -49,7 +49,11 @@ i:hover {
     color: var(--color-white);
 }
 
-.disabled, .disabled:hover {
+.disabled {
+    pointer-events: none;
+}
+
+.disabled i {
     color: var(--color-disabled);
 }
 
