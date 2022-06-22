@@ -10,7 +10,7 @@ nav {
     gap: 0.8rem;
     border-radius: 3rem;
     backdrop-filter: blur(10px);
-    z-index: 10;
+    z-index: 2;
     left: 50%;
     transform: translateX(-50%);
     transition: var(--transition);

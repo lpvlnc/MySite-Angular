@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactModel } from 'src/app/models/contact';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contact',
@@ -15,7 +16,7 @@ export class ContactComponent implements OnInit {
 
   public phone: string = this.contact.phone;
   
-  constructor() { }
+  constructor(private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.contact.whatsappLink = this.contact.phone ? 'https://api.whatsapp.com/send?phone=' + this.contact.phone : '';

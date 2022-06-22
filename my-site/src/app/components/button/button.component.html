@@ -1,5 +1,5 @@
 <a  href="{{href}}">
-    <div [ngClass]="customButton == 'default' ? 'btn button py-3' : 'btn button button-primary py-3'" >
+    <div class='btn button py-3' [ngClass]="{ 'button-primary' : customButton == 'primary' }">
         {{label}}
     </div>
 </a>

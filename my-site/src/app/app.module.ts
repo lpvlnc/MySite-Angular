@@ -28,6 +28,7 @@ import { PortfolioCardOverlayComponent } from './components/home/portfolio/portf
 import { TestimonialCardComponent } from './components/home/testimonials/testimonial-card/testimonial-card.component';
 import { ContactCardComponent } from './components/home/contact/contact-card/contact-card.component';
 import { NavAdminComponent } from './components/home/nav-admin/nav-admin.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { NavAdminComponent } from './components/home/nav-admin/nav-admin.compone
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTooltipModule,
-    SwiperModule
+    SwiperModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
