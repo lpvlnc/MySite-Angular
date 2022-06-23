@@ -11,12 +11,15 @@
     right: 20px;
     width: 120px;
     height: 60px;
-    background: var(--color-white);
+    background: var(--color-primary);
+    backdrop-filter: blur(10px);
+    border-radius: 0.4rem;
     box-shadow: 0 25px 35px var(--color-secondary);
     display: flex;
     justify-content: space-between;
     transition: height 400ms, width 400ms;
     transition-delay: 0s, 400ms;
+    opacity: 0.5;
 }
 
 .navigation.active {
@@ -24,13 +27,13 @@
     height: 400px;
     transition: width 400ms, height 400ms;
     transition-delay: 0s, 400ms;
+    opacity: 1;
 }
 
 .navigation .user {
     position: relative;
     width: 60px;
     height: 60px;
-    background: var(--color-white);
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -41,7 +44,7 @@
 }
 
 .navigation .user .name {
-    color: black;
+    color: var(--color-light);
     white-space: nowrap;
 }
 
@@ -50,9 +53,8 @@
     min-width: 60px;
     height: 60px;
     overflow: hidden;
-    background: black;
     border-radius: 50%;
-    border: 10px solid var(--color-white);
+    border: 10px solid transparent;
 }
 
 .navigation .user .img img {
@@ -79,15 +81,15 @@
     position: absolute;
     width: 32px;
     height: 2px;
-    background: #555;
+    background: var(--color-light);
     transform: translateY(-10px);
-    box-shadow: 0 10px #555;
+    box-shadow: 0 10px var(--color-light);
     transition: var(--transition);
 }
 
 .navigation.active .toggle::before {
     transform: translateY(0px) rotate(45deg);
-    box-shadow: 0 0px #555;
+    box-shadow: 0 0px var(--color-light);
 }
 
 .navigation .toggle::after {
@@ -95,7 +97,7 @@
     position: absolute;
     width: 32px;
     height: 2px;
-    background: #555;
+    background: var(--color-light);
     transform: translateY(10px);
     transition: var(--transition);
 }

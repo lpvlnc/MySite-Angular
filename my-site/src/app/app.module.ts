@@ -17,7 +17,6 @@ import { TestimonialsComponent } from './components/home/testimonials/testimonia
 import { NavComponent } from './components/home/nav/nav.component';
 import { ServicesOfferedComponent } from './components/home/services-offered/services-offered.component';
 import { ButtonComponent } from './components/button/button.component';
-import { MeSocialsComponent } from './components/home/me/me-details/me-socials/me-socials.component';
 import { MeIntroductionComponent } from './components/home/me/me-introduction/me-introduction.component';
 import { MeDetailsComponent } from './components/home/me/me-details/me-details.component';
 import { AboutCardComponent } from './components/home/about/about-card/about-card.component';
@@ -44,7 +43,6 @@ import { ToastrModule } from 'ngx-toastr';
     ServicesOfferedComponent,
     PortfolioComponent,
     ButtonComponent,
-    MeSocialsComponent,
     MeIntroductionComponent,
     MeDetailsComponent,
     AboutCardComponent,
@@ -61,7 +59,17 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserAnimationsModule,
     MatTooltipModule,
     SwiperModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot({
+      timeOut: 5000,
+      extendedTimeOut: 5000,
+      progressBar: true,
+      disableTimeOut: false,
+      enableHtml: false,
+      maxOpened: 3,
+      preventDuplicates: true,
+      countDuplicates: true,
+      resetTimeoutOnDuplicate: true
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

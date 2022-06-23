@@ -28,4 +28,8 @@ export class ContactComponent implements OnInit {
       return '[phone]';
     return this.phone.substring(2).replace(/^(\d{2})(\d{1})(\d{4})(\d{4}).*/, '($1) $2 $3-$4');
   }
+
+  sendMessage(): void {
+    this.toastr.info('Not implemented yet.');
+  }
 }

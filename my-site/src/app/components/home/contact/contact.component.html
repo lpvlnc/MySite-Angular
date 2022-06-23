@@ -30,7 +30,7 @@
                     <textarea class="p-2" name="message" rows="7" placeholder="Your message" required></textarea>
                 </div>
                 <div class="col-12 d-flex justify-content-end">
-                    <app-button class="btn p-0" label="Send message" type="submit" customButton="primary"></app-button>
+                    <app-button class="btn p-0" label="Send message" customButton="primary" (click)="sendMessage()"></app-button>
                 </div>
             </form>
         </div>
