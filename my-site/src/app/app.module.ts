@@ -67,6 +67,7 @@ import { ToastrModule } from 'ngx-toastr';
       enableHtml: false,
       maxOpened: 3,
       preventDuplicates: true,
+      includeTitleDuplicates: true,
       countDuplicates: true,
       resetTimeoutOnDuplicate: true
     })

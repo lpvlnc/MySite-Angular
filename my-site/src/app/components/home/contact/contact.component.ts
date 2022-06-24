@@ -30,6 +30,6 @@ export class ContactComponent implements OnInit {
   }
 
   sendMessage(): void {
-    this.toastr.info('Not implemented yet.');
+    this.toastr.info('Not implemented yet.', 'Send message action');
   }
 }

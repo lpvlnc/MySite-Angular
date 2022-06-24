@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-me-details',
@@ -8,11 +9,14 @@ import { Component, Input, OnInit } from '@angular/core';
 export class MeDetailsComponent implements OnInit {
 
   @Input() picture: string = '';
-  @Input() cvDownload: string = '[cv download]'
+  @Input() cvDownload: string = ''
 
-  constructor() { }
+  constructor(private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
 
+  downloadCV(): void {
+    this.toastr.info('Not implemented yet.', 'Download CV action');
+  }
 }
