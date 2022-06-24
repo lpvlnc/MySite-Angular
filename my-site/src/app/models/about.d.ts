@@ -3,4 +3,5 @@ export interface AboutModel {
     yearsOfExperience: number;
     clients: number;
     projects: number;
+    picture: string;
 }

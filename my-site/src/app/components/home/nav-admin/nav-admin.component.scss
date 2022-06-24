@@ -20,11 +20,12 @@
     transition: height 400ms, width 400ms;
     transition-delay: 0s, 400ms;
     opacity: 0.5;
+    overflow: hidden;
 }
 
 .navigation.active {
     width: 300px;
-    height: 400px;
+    height: 185px;
     transition: width 400ms, height 400ms;
     transition-delay: 0s, 400ms;
     opacity: 1;
@@ -44,7 +45,7 @@
 }
 
 .navigation .user .name {
-    color: var(--color-light);
+    color: var(--color-white);
     white-space: nowrap;
 }
 
@@ -104,4 +105,28 @@
 
 .navigation.active .toggle::after {
     transform: translateY(0px) rotate(-45deg);
+}
+
+.menu {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 60px);
+    margin-top: 60px;
+    padding: 0px 20px;
+}
+
+// hr {
+//     margin-bottom: 5px;
+// }
+
+a {
+    color: var(--color-light);
+}
+
+a:hover {
+    color: var(--color-white);
+}
+
+i {
+    margin-right: 10px;
 }

@@ -6,4 +6,31 @@
         <p class="name">{{name}}</p>
     </div>
     <div class="toggle" (click)="toggle()"></div>
+    <ul class="menu">
+        <hr class="mb-2">
+        <li>
+            <a (click)="openDashboard()">
+                <i class="fa-solid fa-chart-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li>
+            <a (click)="openNotifications()">
+                <i class="fa-solid fa-bell"></i>
+                Notifications
+            </a>
+        </li>
+        <li>
+            <a (click)="openSettings()">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+        </li>
+        <li>
+            <a (click)="logout()">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                Logout
+            </a>
+        </li>
+    </ul>
 </div>

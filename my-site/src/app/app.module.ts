@@ -60,6 +60,7 @@ import { ToastrModule } from 'ngx-toastr';
     MatTooltipModule,
     SwiperModule,
     ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right',
       timeOut: 5000,
       extendedTimeOut: 5000,
       progressBar: true,
