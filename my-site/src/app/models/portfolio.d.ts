@@ -3,4 +3,5 @@ export class ProjectModel {
     description: string;
     github: string;
     build: string;
+    image: string;
 }

@@ -4,10 +4,7 @@
 
 .portfolio-card {
     position: relative;
-}
-
-.portfolio-card-img {
-    border: 1px solid transparent;
+    height: 188px;
     border-radius: 1rem;
-    display: block;
+    overflow: hidden;
 }

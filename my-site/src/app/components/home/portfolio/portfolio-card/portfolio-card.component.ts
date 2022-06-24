@@ -12,7 +12,8 @@ export class PortfolioCardComponent implements OnInit {
     title: '[project title]',
     description: '[project description]',
     github: '[project github]',
-    build: '[project build]'
+    build: '[project build]',
+    image: '[project image]'
   };
 
   constructor() { }

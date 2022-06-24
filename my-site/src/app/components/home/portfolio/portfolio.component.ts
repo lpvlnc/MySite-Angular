@@ -15,25 +15,29 @@ export class PortfolioComponent implements OnInit {
       title: '[project title]',
       description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum nesciunt saepe laborum hic! Commodi eius impedit eum doloremque omnis, repellendus totam. Architecto iure omnis, hic quaerat delectus iusto voluptas veniam.',
       github: 'https://github.com/lpvlnc',
-      build: 'build'
+      build: 'build',
+      image: '../../../../../assets/portfolio/portfolio-card-placeholder.png'
     },
     {
       title: '[project title]',
       description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum nesciunt saepe laborum hic! Commodi eius impedit eum doloremque omnis, repellendus totam. Architecto iure omnis, hic quaerat delectus iusto voluptas veniam.',
       github: 'https://github.com/lpvlnc',
-      build: 'build'
+      build: 'build',
+      image: '../../../../assets/me/me-about.jpg'
     },
     {
       title: '[project title]',
       description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum nesciunt saepe laborum hic! Commodi eius impedit eum doloremque omnis, repellendus totam. Architecto iure omnis, hic quaerat delectus iusto voluptas veniam.',
       github: 'https://github.com/lpvlnc',
-      build: 'build'
+      build: 'build',
+      image: '../../../../../assets/portfolio/portfolio-card-placeholder.png'
     },
     {
       title: '[project title]',
       description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum nesciunt saepe laborum hic! Commodi eius impedit eum doloremque omnis, repellendus totam. Architecto iure omnis, hic quaerat delectus iusto voluptas veniam.',
       github: 'https://github.com/lpvlnc',
-      build: 'build'
+      build: 'build',
+      image: '../../../../assets/me/me-about.jpg'
     }
   ];
 
