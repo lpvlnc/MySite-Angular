@@ -1,6 +1,6 @@
 export interface ContactModel {
-    email: string;
-    phone: string;
-    whatsappLink?: string;
-    emailLink?: string;
+    icon: string;
+    title: string;
+    content: string;
+    link: string;
 }

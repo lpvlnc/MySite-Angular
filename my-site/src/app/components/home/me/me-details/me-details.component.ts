@@ -9,7 +9,7 @@ import { ToastrService } from 'ngx-toastr';
 export class MeDetailsComponent implements OnInit {
 
   @Input() picture: string = '';
-  @Input() cvDownload: string = ''
+  @Input() cv: string = ''
 
   constructor(private toastr: ToastrService) { }
 

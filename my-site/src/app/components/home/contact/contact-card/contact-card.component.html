@@ -1,21 +1,21 @@
-<article class="custom-card flip-card">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 mt-1">
-                <i class="{{icon}}"></i>
+<article class='custom-card flip-card'>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-12 mt-1'>
+                <i [class]='contact.icon'></i>
             </div>
-            <div class="col-12 mb-4">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h5 class="mb-0">{{title}}</h5>
+            <div class='col-12 mb-4'>
+                <div class='flip-card-inner'>
+                    <div class='flip-card-front'>
+                        <h5 class='mb-0'>{{contact.title}}</h5>
                     </div>
-                    <div class="flip-card-back">
-                        <h5 class="mb-0" (click)="copyContent()" matTooltip="Click to copy" matTooltipPosition="above">{{content}}</h5>
+                    <div class='flip-card-back'>
+                        <h5 class='mb-0' (click)='copyContent()' matTooltip='Click to copy' matTooltipPosition='above'>{{contact.content}}</h5>
                     </div>
                 </div>
             </div>
-            <div class="col-12">
-                <a class="link" href="{{contactLink}}" target="_blank">
+            <div class='col-12'>
+                <a class='link' [href]='contact.link' target='_blank'>
                     <small>contact me</small>
                 </a>
             </div>

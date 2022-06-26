@@ -1,13 +1,13 @@
-<section id="testimonials" class="container pt-5">
-    <div class="row mb-2">
-        <div class="col-12">
+<section id='testimonials' class='container pt-5'>
+    <div class='row mb-2'>
+        <div class='col-12'>
             <h2>Testimonials</h2>
             <h3>From my clients and coworkers</h3>
         </div>
     </div>
-    <swiper [config]="swiperConfig">
-        <ng-template swiperSlide *ngFor="let testimonial of testimonials">
-            <app-testimonial-card [testimonial]="testimonial"></app-testimonial-card>
+    <swiper [config]='swiperConfig'>
+        <ng-template swiperSlide *ngFor='let testimonial of testimonials'>
+            <app-testimonial-card [testimonial]='testimonial'></app-testimonial-card>
         </ng-template>
     </swiper>
 </section>

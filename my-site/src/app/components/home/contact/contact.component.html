@@ -1,36 +1,31 @@
-<section id="contact" class="container pt-5">
-    <div class="row mb-2">
-        <div class="col-12">
+<section id='contact' class='container pt-5'>
+    <div class='row mb-2'>
+        <div class='col-12'>
             <h2>Contact</h2>
             <h3>Send me a message</h3>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12 col-md-4 mb-2">
-            <div class="row mb-2">
-                <div class="col-12">
-                    <app-contact-card icon="fa-solid fa-envelope" title="Email" content="{{contact.email}}" contactLink="{{contact.emailLink}}"></app-contact-card>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <app-contact-card icon="fa-brands fa-whatsapp" title="WhatsApp" content="{{getPhone()}}" contactLink="{{contact.whatsappLink}}"></app-contact-card>
+    <div class='row'>
+        <div class='col-12 col-md-4 mb-2'>
+            <div class='row mb-2'  *ngFor='let contact of contacts'>
+                <div class='col-12'>
+                    <app-contact-card [contact]='contact' [phone]='isPhone(contact.title)'></app-contact-card>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-8">
-            <form action="">
-                <div class="col-12">
-                    <input class="p-2" type="text" name="name" placeholder="Your full name" required/>
+        <div class='col-12 col-md-8'>
+            <form action=''>
+                <div class='col-12'>
+                    <input class='p-2' type='text' name='name' placeholder='Your full name' required/>
                 </div>
-                <div class="col-12">
-                    <input class="p-2" type="email" name="email" placeholder="Your email" required/>
+                <div class='col-12'>
+                    <input class='p-2' type='email' name='email' placeholder='Your email' required/>
                 </div>
-                <div class="col-12">
-                    <textarea class="p-2" name="message" rows="7" placeholder="Your message" required></textarea>
+                <div class='col-12'>
+                    <textarea class='p-2' name='message' rows='7' placeholder='Your message' required></textarea>
                 </div>
-                <div class="col-12 d-flex justify-content-end">
-                    <app-button class="btn p-0" label="Send message" customButton="primary" (click)="sendMessage()"></app-button>
+                <div class='col-12 d-flex justify-content-end'>
+                    <app-button class='btn p-0' label='Send message' customButton='primary' (click)='sendMessage()'></app-button>
                 </div>
             </form>
         </div>

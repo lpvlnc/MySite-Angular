@@ -1,6 +1,6 @@
 export interface MeModel {
     name: string;
-    description: string;
+    role: string;
     cv: string;
     picture: string;
 }

@@ -1,31 +1,33 @@
-<footer id="footer" class="mt-4 p-5">
-    <a href="#" class="footer_logo mb-4">VALENÇA</a>
-    <ul class="permalinks mb-4">
+<footer id='footer' class='mt-4 p-5'>
+    <a href='home#me' class='footer_logo mb-4'>VALENÇA</a>
+    <ul class='permalinks mb-4'>
         <li>
-            <a href="home#me">Home</a>
-        </li>
-        <a href="home#about">About</a>
-        <li>
-            <a href="home#experience">Experience</a>
+            <a href='home#me'>Home</a>
         </li>
         <li>
-            <a href="home#portfolio">Portfolio</a>
+            <a href='home#about'>About</a>
         </li>
         <li>
-            <a href="home#testimonials">Testimonials</a>
+            <a href='home#experience'>Experience</a>
         </li>
         <li>
-            <a href="home#contact">Contact</a>
+            <a href='home#portfolio'>Portfolio</a>
+        </li>
+        <li>
+            <a href='home#testimonials'>Testimonials</a>
+        </li>
+        <li>
+            <a href='home#contact'>Contact</a>
         </li>
     </ul>
 
-    <div class="col-12 footer_socials mb-4">
-        <a *ngFor="let social of socials"
-            href="{{social.link}}" 
-            target="_blank" 
-            matTooltip="{{social.name}}" 
-            matTooltipPosition="below">
-            <i class="{{social.icon}}"></i>
+    <div class='col-12 footer_socials mb-4'>
+        <a *ngFor='let social of socials'
+            [href]='social.link' 
+            target='_blank' 
+            [matTooltip]='social.name' 
+            matTooltipPosition='below'>
+            <i [class]='social.icon'></i>
         </a>
     </div>
 

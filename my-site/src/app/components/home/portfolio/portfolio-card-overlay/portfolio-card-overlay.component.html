@@ -1,33 +1,35 @@
-<div class="overlay-container" title>
+<div class='overlay-container' title>
     
-    <div class="row title mb-2">
-        <div class="col-12">
+    <div class='row title mb-2'>
+        <div class='col-12'>
             <h5>{{project.title}}</h5>
         </div>
     </div>
 
-    <div class="row description px-4 mt-5">
-        <div class="col-12">
+    <div class='row description px-4 mt-5'>
+        <div class='col-12'>
             <small>{{project.description}}</small>
         </div>
     </div>
 
-    <div class="links">
-        <div class="container">
-            <div class="row">
-                <div class="col-4">
-                    <a href="{{project.github}}" target="_blank" matTooltip="See on Github">
-                        <i class="fa-brands fa-github" ></i>
+    <div class='links'>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-4'>
+                    <a [href]='project.github' target='_blank' matTooltip='See on Github'>
+                        <i class='fa-brands fa-github' ></i>
                     </a>
                 </div>
-                <div class="col-4">
-                    <a class="disabled" href="{{project.build}}" target="_blank" matTooltip="Live demo">
-                        <i class="fa-solid fa-rocket"></i>
+
+                <div class='col-4'>
+                    <a [href]='project.build' target='_blank' matTooltip='Live demo'>
+                        <i class='fa-solid fa-rocket'></i>
                     </a>
                 </div>
-                <div class="col-4">
-                    <a class="link" href="{{project.build}}" target="_blank" matTooltip="Details">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                
+                <div class='col-4'>
+                    <a class='link' [href]='project.build' target='_blank' matTooltip='Details'>
+                        <i class='fa-solid fa-arrow-up-right-from-square'></i>
                     </a>
                 </div>
             </div>

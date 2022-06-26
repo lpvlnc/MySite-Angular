@@ -6,4 +6,5 @@ export class ExperienceListModel {
 export class ExperienceModel {
     technology: string;
     level: string;
+    stack: string;
 }

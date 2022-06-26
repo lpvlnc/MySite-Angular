@@ -1,44 +1,44 @@
-<div class="d-none d-sm-flex">
+<div class='d-none d-sm-flex'>
     <nav [ngClass]="hide ? 'hide' : ''">
-        <a routerLink="/home" 
-           fragment="me" 
-           routerLinkActive="active" 
-           [routerLinkActiveOptions]="linkActiveOptions">
-            <i class="fa-solid fa-house"></i>
+        <a routerLink='/home' 
+           fragment='me' 
+           routerLinkActive='active' 
+           [routerLinkActiveOptions]='linkActiveOptions'>
+            <i class='fa-solid fa-house'></i>
         </a>
-        <a routerLink="/home" 
-           fragment="about" 
-           routerLinkActive="active"
-           [routerLinkActiveOptions]="linkActiveOptions">
-            <i class="fa-solid fa-user"></i>
+        <a routerLink='/home' 
+           fragment='about' 
+           routerLinkActive='active'
+           [routerLinkActiveOptions]='linkActiveOptions'>
+            <i class='fa-solid fa-user'></i>
         </a>
-        <a routerLink="/home" 
-           fragment="experience"
-           routerLinkActive="active"
-           [routerLinkActiveOptions]="linkActiveOptions">
-            <i class="fa-solid fa-book"></i>
+        <a routerLink='/home' 
+           fragment='experience'
+           routerLinkActive='active'
+           [routerLinkActiveOptions]='linkActiveOptions'>
+            <i class='fa-solid fa-book'></i>
         </a>
-        <a routerLink="/home" 
-           fragment="portfolio"
-           routerLinkActive="active"
-           [routerLinkActiveOptions]="linkActiveOptions">
-           <i class="fa-solid fa-laptop-code"></i>
+        <a routerLink='/home' 
+           fragment='portfolio'
+           routerLinkActive='active'
+           [routerLinkActiveOptions]='linkActiveOptions'>
+           <i class='fa-solid fa-laptop-code'></i>
         </a>
-        <a routerLink="/home" 
-           fragment="testimonials"
-           routerLinkActive="active"
-           [routerLinkActiveOptions]="linkActiveOptions">
-           <i class="fa-solid fa-users"></i>
+        <a routerLink='/home' 
+           fragment='testimonials'
+           routerLinkActive='active'
+           [routerLinkActiveOptions]='linkActiveOptions'>
+           <i class='fa-solid fa-users'></i>
         </a>
-        <a routerLink="/home" 
-           fragment="contact"
-           routerLinkActive="active"
-           [routerLinkActiveOptions]="linkActiveOptions">
-           <i class="fa-solid fa-envelope"></i>
+        <a routerLink='/home' 
+           fragment='contact'
+           routerLinkActive='active'
+           [routerLinkActiveOptions]='linkActiveOptions'>
+           <i class='fa-solid fa-envelope'></i>
         </a>
-        <a class="arrow" (click)="hideNavbar()">
-            <i *ngIf="hide" class="fa-solid fa-angle-right"></i>
-            <i *ngIf="!hide" class="fa-solid fa-angle-left"></i>
+        <a class='arrow' (click)='hideNavbar()'>
+            <i *ngIf='hide' class='fa-solid fa-angle-right'></i>
+            <i *ngIf='!hide' class='fa-solid fa-angle-left'></i>
         </a>
     </nav>
 </div>

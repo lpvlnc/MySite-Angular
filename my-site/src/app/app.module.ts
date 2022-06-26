@@ -15,7 +15,6 @@ import { FooterComponent } from './components/home/footer/footer.component';
 import { MeComponent } from './components/home/me/me.component';
 import { TestimonialsComponent } from './components/home/testimonials/testimonials.component';
 import { NavComponent } from './components/home/nav/nav.component';
-import { ServicesOfferedComponent } from './components/home/services-offered/services-offered.component';
 import { ButtonComponent } from './components/button/button.component';
 import { MeIntroductionComponent } from './components/home/me/me-introduction/me-introduction.component';
 import { MeDetailsComponent } from './components/home/me/me-details/me-details.component';
@@ -40,7 +39,6 @@ import { ToastrModule } from 'ngx-toastr';
     MeComponent,
     TestimonialsComponent,
     NavComponent,
-    ServicesOfferedComponent,
     PortfolioComponent,
     ButtonComponent,
     MeIntroductionComponent,

@@ -9,8 +9,8 @@ import { MeModel } from 'src/app/models/me';
 export class MeComponent implements OnInit {
 
   me: MeModel = {
-    name: 'my name',
-    description: 'desc',
+    name: 'Leonardo Valença',
+    role: 'Fullstack Developer',
     cv: 'aaa',
     picture: '../../../assets/me/me.png'
   }

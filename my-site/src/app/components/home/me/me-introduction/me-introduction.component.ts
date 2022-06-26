@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class MeIntroductionComponent implements OnInit {
 
   @Input() name: string = '[name]';
-  @Input() description: string = '[description]';
+  @Input() role: string = '[description]';
 
   constructor() { }
 

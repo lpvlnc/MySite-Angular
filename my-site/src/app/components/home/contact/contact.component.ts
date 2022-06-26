@@ -9,27 +9,31 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ContactComponent implements OnInit {
 
-  contact: ContactModel = {
-    email: '[email]',
-    phone: '[phone]'
-  }
-
-  public phone: string = this.contact.phone;
+  contacts: ContactModel[] = [
+    {
+    icon: 'fa-solid fa-envelope',
+    title: 'Email',
+    content: 'lpvalenca@hotmail.com',
+    link: 'mailto:lpvalenca@hotmail.com'
+    },
+    {
+      icon: 'fa-brands fa-whatsapp',
+      title: 'Whatsapp',
+      content: '5551993822341',
+      link: 'https://api.whatsapp.com/send?phone=5551993822341'
+    }
+  ];
   
   constructor(private toastr: ToastrService) { }
 
   ngOnInit(): void {
-    this.contact.whatsappLink = this.contact.phone ? 'https://api.whatsapp.com/send?phone=' + this.contact.phone : '';
-    this.contact.emailLink = this.contact.email != '[email]' ? 'mailto:' + this.contact.email : '';
-  }
-
-  getPhone(): string {
-    if (this.contact.phone == '[phone]')
-      return '[phone]';
-    return this.phone.substring(2).replace(/^(\d{2})(\d{1})(\d{4})(\d{4}).*/, '($1) $2 $3-$4');
   }
 
   sendMessage(): void {
     this.toastr.info('Not implemented yet.', 'Send message action');
+  }
+
+  isPhone(content: string): boolean {
+    return content === 'Whatsapp' || content === 'Phone';
   }
 }
