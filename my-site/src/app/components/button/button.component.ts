@@ -6,14 +6,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
 
-  /**
-   * Label do botão
-   */
   @Input() label: string = '';
 
   @Input() customButton: string = 'default';
 
   @Input() href: string = '';
+
+  @Input() icon: string = '';
+
+  @Input() disabled: boolean = false;
 
   constructor() { }
 

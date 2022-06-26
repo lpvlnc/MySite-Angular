@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -8,10 +9,13 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class NavAdminComponent implements OnInit {
 
+
+  loggedIn: boolean = false;
   active: boolean = false;
   public name: string = 'Leonardo Valença';
 
-  constructor(private toastr: ToastrService) { }
+  constructor(private toastr: ToastrService,
+              private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -31,6 +35,10 @@ export class NavAdminComponent implements OnInit {
 
   openSettings(): void {
     this.toastr.info("Settings doesn't implemented yet.", 'Settings action');
+  }
+
+  openLoginPage(): void {
+    this.router.navigate(['login']);
   }
 
   logout(): void {

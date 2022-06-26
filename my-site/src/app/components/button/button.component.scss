@@ -18,3 +18,17 @@
     color: var(--color-white);
     border-color: transparent;
 }
+
+.button-disabled {
+    background: var(--color-secondary);
+    color: var(--color-light);
+    cursor: not-allowed;
+}
+
+.button-disabled:hover {
+    color: var(--color-light);
+}
+
+i {
+    margin-right: 10px;
+}

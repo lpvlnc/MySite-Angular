@@ -1,4 +1,6 @@
-<div class='navigation' [ngClass]="{'active' : active}">
+<app-button *ngIf='!loggedIn' class='btn login-button' label='Login' customButton='secondary' icon='fa-solid fa-arrow-right-to-bracket' (click)='openLoginPage()'></app-button>
+
+<div *ngIf='loggedIn' class='navigation' [ngClass]="{'active' : active}">
     <div class='user'>
         <div class='img'>
             <img src='../../../../assets/me/me-about.jpg' alt=''>

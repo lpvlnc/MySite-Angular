@@ -1,5 +1,5 @@
 <a [attr.href]='href ? href : null'>
-    <div class='btn button py-3' [ngClass]="{ 'button-primary' : customButton == 'primary' }">
-        {{label}}
+    <div class='btn button py-3' [ngClass]="{ 'button-primary' : customButton == 'primary' }" [ngClass]="{ 'button-disabled' : disabled }">
+        <i *ngIf='icon' [class]="icon"></i>{{label}}
     </div>
 </a>

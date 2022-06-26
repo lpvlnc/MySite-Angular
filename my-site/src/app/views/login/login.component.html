@@ -1,0 +1,30 @@
+<div id='contact' class='container vh-100 d-flex justify-content-center align-items-center'>
+    <div class='row custom-card'>
+        <div class='col-12 pt-4'>
+            <div class='row pb-4'>
+                <h1>Restricted access</h1>
+            </div>
+
+            <form [formGroup]="form">
+                <div class='row pb-4'>
+                    <div class='col-12'>
+                        <input class='p-2' type='text' name='name' placeholder='Username' formControlName='username'/>
+                    </div>
+                </div>
+                
+                <div class='row pb-4'>
+                    <div class='col-12'>
+                        <input class='p-2' type='password' name='email' placeholder='Password' formControlName='password'/>
+                    </div>
+                </div>
+    
+                <div class='row pb-4'>
+                    <div class='col-12 d-flex justify-content-end'>
+                        <app-button class='btn p-0' label='Login' customButton='primary' (click)='login()' [disabled]="!form.valid"></app-button>
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</div>

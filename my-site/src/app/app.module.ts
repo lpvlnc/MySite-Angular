@@ -27,6 +27,8 @@ import { TestimonialCardComponent } from './components/home/testimonials/testimo
 import { ContactCardComponent } from './components/home/contact/contact-card/contact-card.component';
 import { NavAdminComponent } from './components/home/nav-admin/nav-admin.component';
 import { ToastrModule } from 'ngx-toastr';
+import { LoginComponent } from './views/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -49,12 +51,14 @@ import { ToastrModule } from 'ngx-toastr';
     PortfolioCardOverlayComponent,
     TestimonialCardComponent,
     ContactCardComponent,
-    NavAdminComponent
+    NavAdminComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     MatTooltipModule,
     SwiperModule,
     ToastrModule.forRoot({
