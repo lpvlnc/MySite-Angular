@@ -8,7 +8,7 @@ import { ExperienceModel } from 'src/app/models/experience';
 })
 export class ExperienceCardComponent implements OnInit {
 
-  @Input() title: string = 'Título';
+  @Input() title: string = '';
   @Input() experiences: ExperienceModel[] = [];
 
   constructor() { }

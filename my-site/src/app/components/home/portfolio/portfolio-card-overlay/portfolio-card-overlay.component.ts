@@ -9,15 +9,22 @@ import { ProjectModel } from 'src/app/models/portfolio';
 export class PortfolioCardOverlayComponent implements OnInit {
 
   @Input() project: ProjectModel = {
-    title: '[project title]',
-    description: '[project description]',
-    github: '[project github]',
-    build: '[project build]',
-    image: '[project image]'
+    title: '',
+    description: '',
+    github: '',
+    build: '',
+    image: ''
   };
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  disableGithub(): boolean {
+    return !this.project.github;
+  }
+
+  disableBuild(): boolean {
+    return !this.project.build;
+  }
 }

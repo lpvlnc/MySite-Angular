@@ -10,10 +10,10 @@ import { ContactModel } from 'src/app/models/contact';
 export class ContactCardComponent implements OnInit {
 
   @Input() contact: ContactModel = {
-    icon: '[icon]',
-    title: '[title]',
-    content: '[content]',
-    link: '[link]'
+    icon: '',
+    title: '',
+    content: '',
+    link: ''
   };
 
   @Input() phone: boolean = false;

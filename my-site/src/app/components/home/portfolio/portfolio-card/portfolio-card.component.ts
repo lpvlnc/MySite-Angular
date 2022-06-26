@@ -9,11 +9,11 @@ import { ProjectModel } from 'src/app/models/portfolio';
 export class PortfolioCardComponent implements OnInit {
 
   @Input() project: ProjectModel = {
-    title: '[project title]',
-    description: '[project description]',
-    github: '[project github]',
-    build: '[project build]',
-    image: '[project image]'
+    title: '',
+    description: '',
+    github: '',
+    build: '',
+    image: ''
   };
 
   constructor() { }

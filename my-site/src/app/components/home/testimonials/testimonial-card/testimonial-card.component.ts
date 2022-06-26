@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { TestimonialModel } from 'src/app/models/testimonial';
 
 @Component({
   selector: 'app-testimonial-card',
@@ -7,7 +8,13 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TestimonialCardComponent implements OnInit {
 
-  @Input() testimonial: any;
+  @Input() testimonial: TestimonialModel = {
+    profilePic: '',
+    name: '',
+    relationship: '',
+    message: ''
+  };
+  
   constructor() { }
 
   ngOnInit(): void {
