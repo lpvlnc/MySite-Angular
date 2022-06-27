@@ -159,6 +159,12 @@ input:-webkit-autofill:active {
     -webkit-text-fill-color: #fff !important;
 }
 
+.error-message {
+    display: flex;
+    justify-content: start;
+    color: rgb(200, 0, 0);
+}
+
 @each $breakpoint in map-keys($grid-breakpoints) {
     $sizes: ( 25: 25%, 50: 50%, 75: 75%, 100: 100%, );
     @each $size, $length in $sizes {

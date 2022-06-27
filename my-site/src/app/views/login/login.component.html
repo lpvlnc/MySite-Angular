@@ -6,15 +6,22 @@
             </div>
 
             <form [formGroup]="form">
-                <div class='row pb-4'>
+                <div class='row pb-2'>
                     <div class='col-12'>
-                        <input class='p-2' type='text' name='name' placeholder='Username' formControlName='username'/>
+                        <input class='p-2' type='text' id='username' name='username' placeholder='Username' formControlName='username'/>
+                        <p class='error-message' *ngIf="form.controls['username'].errors?.['required']">
+                            Username is required.
+                        </p>
                     </div>
+                    
                 </div>
                 
-                <div class='row pb-4'>
+                <div class='row pb-2'>
                     <div class='col-12'>
-                        <input class='p-2' type='password' name='email' placeholder='Password' formControlName='password'/>
+                        <input class='p-2' type='password' name='password' placeholder='Password' formControlName='password'/>
+                        <p class='error-message' *ngIf="form.controls['password'].errors?.['required']">
+                            Password is required.
+                        </p>
                     </div>
                 </div>
     
