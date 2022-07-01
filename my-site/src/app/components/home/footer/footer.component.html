@@ -1,5 +1,5 @@
 <footer id='footer' class='mt-4 p-5'>
-    <a href='home#me' class='footer_logo mb-4'>VALENÇA</a>
+    <a href='home#me' class='footer_logo mb-4'>{{footerInfo.tradingName}}</a>
     <ul class='permalinks mb-4'>
         <li>
             <a href='home#me'>Home</a>
@@ -22,7 +22,7 @@
     </ul>
 
     <div class='col-12 footer_socials mb-4'>
-        <a *ngFor='let social of socials'
+        <a *ngFor='let social of footerInfo.socials'
             [href]='social.link' 
             target='_blank' 
             [matTooltip]='social.name' 
@@ -31,5 +31,5 @@
         </a>
     </div>
 
-    <small>&copy; VALENÇA. All rights reserved.</small>
+    <small>&copy; {{footerInfo.tradingName}}. All rights reserved.</small>
 </footer>

@@ -1,4 +1,4 @@
-export class ProjectModel {
+export class Project {
     title: string;
     description: string;
     github: string;

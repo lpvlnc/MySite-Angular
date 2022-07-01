@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, ViewChild } from "@angular/core";
-import { SwiperComponent } from "swiper/angular";
 import SwiperCore, { Autoplay, Pagination, Navigation, SwiperOptions, EffectCoverflow } from "swiper";
-import { TestimonialModel } from "src/app/models/testimonial";
+import { Testimonial } from "src/app/models/testimonial";
+import { TestimonialService } from "src/app/services/testimonial/testimonial.service";
 
 SwiperCore.use([Autoplay, Navigation, Pagination, EffectCoverflow]);
 
@@ -21,60 +21,18 @@ export class TestimonialsComponent implements OnInit {
     speed: 800
   };
 
-  public testimonials: TestimonialModel[] = [
+  public testimonials: Testimonial[] = [
     {
-      profilePic: '../../../../../assets/testimonial-profile-pic/avatar1.jpg',
+      profilePic: '[picture]',
       name: '[client/coworker name]',
-      relationship: this.getRelationship(),
-      message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur veritatis deserunt odio exercitationem a nam excepturi aliquam provident reiciendis asperiores modi, nesciunt velit inventore impedit unde? Dignissimos corrupti facere voluptates!'
-    },
-    {
-      profilePic: '../../../../../assets/testimonial-profile-pic/avatar2.jpg',
-      name: '[client/coworker name]',
-      relationship: this.getRelationship(),
-      message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur veritatis deserunt odio exercitationem a nam excepturi aliquam provident reiciendis asperiores modi, nesciunt velit inventore impedit unde? Dignissimos corrupti facere voluptates!'
-    },
-    {
-      profilePic: '../../../../../assets/testimonial-profile-pic/avatar3.jpg',
-      name: '[client/coworker name]',
-      relationship: this.getRelationship(),
-      message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur veritatis deserunt odio exercitationem a nam excepturi aliquam provident reiciendis asperiores modi, nesciunt velit inventore impedit unde? Dignissimos corrupti facere voluptates!'
-    },
-    {
-      profilePic: '../../../../../assets/testimonial-profile-pic/avatar4.jpg',
-      name: '[client/coworker name]',
-      relationship: this.getRelationship(),
-      message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur veritatis deserunt odio exercitationem a nam excepturi aliquam provident reiciendis asperiores modi, nesciunt velit inventore impedit unde? Dignissimos corrupti facere voluptates!'
-    },
-    {
-      profilePic: '../../../../../assets/testimonial-profile-pic/avatar1.jpg',
-      name: '[client/coworker name]',
-      relationship: this.getRelationship(),
-      message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur veritatis deserunt odio exercitationem a nam excepturi aliquam provident reiciendis asperiores modi, nesciunt velit inventore impedit unde? Dignissimos corrupti facere voluptates!'
-    },
-    {
-      profilePic: '../../../../../assets/testimonial-profile-pic/avatar2.jpg',
-      name: '[client/coworker name]',
-      relationship: this.getRelationship(),
-      message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur veritatis deserunt odio exercitationem a nam excepturi aliquam provident reiciendis asperiores modi, nesciunt velit inventore impedit unde? Dignissimos corrupti facere voluptates!'
-    },
+      relationship: '[relationship]',
+      message: '[message]'
+    }
   ];
-  constructor() { }
+
+  constructor(private service: TestimonialService) { }
 
   ngOnInit(): void {
-  }
-
-  getRelationship(): string {
-    let num = Math.floor(Math.random() * (3 + 1));
-    switch(num){
-      case 0:
-        return 'client';
-      case 1:
-        return 'coworker';
-      case 2: 
-        return 'client & coworker';
-      default:
-        return 'client & coworker';
-    }
+    this.testimonials = this.service.getTestimonials();
   }
 }

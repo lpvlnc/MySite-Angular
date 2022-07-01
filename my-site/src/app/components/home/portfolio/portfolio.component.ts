@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProjectModel } from 'src/app/models/portfolio';
+import { Project } from 'src/app/models/portfolio';
+import { PortfolioService } from 'src/app/services/portfolio/portfolio.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -8,40 +9,20 @@ import { ProjectModel } from 'src/app/models/portfolio';
 })
 export class PortfolioComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: PortfolioService) { }
 
-  projects: ProjectModel[] = [
+  projects: Project[] = [
     {
-      title: '[project title]',
-      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum nesciunt saepe laborum hic! Commodi eius impedit eum doloremque omnis, repellendus totam. Architecto iure omnis, hic quaerat delectus iusto voluptas veniam.',
-      github: 'https://github.com/lpvlnc',
-      build: '',
-      image: '../../../../../assets/portfolio/portfolio-card-placeholder.png'
-    },
-    {
-      title: '[project title]',
-      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum nesciunt saepe laborum hic! Commodi eius impedit eum doloremque omnis, repellendus totam. Architecto iure omnis, hic quaerat delectus iusto voluptas veniam.',
-      github: 'https://github.com/lpvlnc',
-      build: '',
-      image: '../../../../assets/me/me-about.jpg'
-    },
-    {
-      title: '[project title]',
-      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum nesciunt saepe laborum hic! Commodi eius impedit eum doloremque omnis, repellendus totam. Architecto iure omnis, hic quaerat delectus iusto voluptas veniam.',
-      github: 'https://github.com/lpvlnc',
-      build: '',
-      image: '../../../../../assets/portfolio/portfolio-card-placeholder.png'
-    },
-    {
-      title: '[project title]',
-      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum nesciunt saepe laborum hic! Commodi eius impedit eum doloremque omnis, repellendus totam. Architecto iure omnis, hic quaerat delectus iusto voluptas veniam.',
-      github: 'https://github.com/lpvlnc',
-      build: '',
-      image: '../../../../assets/me/me-about.jpg'
+      title: '[title]',
+      description: '[description]',
+      github: '[githubLink]',
+      build: '[buildLink',
+      image: '[image]'
     }
   ];
 
   ngOnInit(): void {
+    this.projects = this.service.getProjects();
   }
 
 }

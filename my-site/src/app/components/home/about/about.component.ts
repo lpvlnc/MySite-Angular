@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AboutModel } from 'src/app/models/about';
+import { About } from 'src/app/models/about';
+import { AboutService } from 'src/app/services/about/about.service';
 
 @Component({
   selector: 'app-about',
@@ -7,17 +8,18 @@ import { AboutModel } from 'src/app/models/about';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-
-  about: AboutModel = {
-    image: '../../../../assets/me/me-about.jpg',
-    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro reprehenderit exercitationem dolor, pariatur quasi incidunt quisquam nihil alias at fugit, nostrum iste corporis voluptate itaque excepturi labore dolorum delectus accusamus.',
-    yearsOfExperience: 1,
+  
+  about: About = {
+    image: '',
+    description: '',
+    yearsOfExperience: 0,
     clients: 0,
     projects: 0
   }
-  constructor() { }
+
+  constructor(private service: AboutService) { }
 
   ngOnInit(): void {
+    this.about = this.service.getAbout();
   }
-
 }

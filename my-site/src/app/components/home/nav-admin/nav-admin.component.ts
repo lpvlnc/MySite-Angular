@@ -10,7 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 export class NavAdminComponent implements OnInit {
 
 
-  loggedIn: boolean = false;
+  loggedIn: boolean = true;
   active: boolean = false;
   public name: string = 'Leonardo Valença';
 

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Clipboard } from '@angular/cdk/clipboard';
-import { ContactModel } from 'src/app/models/contact';
+import { Contact } from 'src/app/models/contact';
 
 @Component({
   selector: 'app-contact-card',
@@ -9,7 +9,7 @@ import { ContactModel } from 'src/app/models/contact';
 })
 export class ContactCardComponent implements OnInit {
 
-  @Input() contact: ContactModel = {
+  @Input() contact: Contact = {
     icon: '',
     title: '',
     content: '',

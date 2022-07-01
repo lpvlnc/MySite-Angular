@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MeModel } from 'src/app/models/me';
+import { Me } from 'src/app/models/me';
+import { MeService } from 'src/app/services/me/me.service';
 
 @Component({
   selector: 'app-me',
@@ -8,16 +9,17 @@ import { MeModel } from 'src/app/models/me';
 })
 export class MeComponent implements OnInit {
 
-  me: MeModel = {
-    name: 'Leonardo Valença',
-    role: 'Fullstack Developer',
-    cv: 'aaa',
-    picture: '../../../assets/me/me.png'
+  me: Me = {
+    name: '[name]',
+    role: '[role]',
+    cv: '[cv]',
+    picture: '[image]'
   }
 
-  constructor() { }
+  constructor(private service: MeService) { }
 
   ngOnInit(): void {
+    this.me = this.service.getMeInfo();
   }
 
 }

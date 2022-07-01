@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ProjectModel } from 'src/app/models/portfolio';
+import { Project } from 'src/app/models/portfolio';
 
 @Component({
   selector: 'app-portfolio-card',
@@ -8,7 +8,7 @@ import { ProjectModel } from 'src/app/models/portfolio';
 })
 export class PortfolioCardComponent implements OnInit {
 
-  @Input() project: ProjectModel = {
+  @Input() project: Project = {
     title: '',
     description: '',
     github: '',

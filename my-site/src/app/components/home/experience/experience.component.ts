@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ExperienceModel } from 'src/app/models/experience';
+import { Experience } from 'src/app/models/experience';
+import { ExperienceService } from 'src/app/services/experience/experience.service';
 
 @Component({
   selector: 'app-experience',
@@ -8,56 +9,22 @@ import { ExperienceModel } from 'src/app/models/experience';
 })
 export class ExperienceComponent implements OnInit {
 
-  experiences: ExperienceModel[] = [
+  experiences: Experience[] = [
     {
-      technology: 'C#',
-      level: 'Experienced',
-      stack: 'B'
-    },
-    {
-      technology: 'ASP.NET CORE',
-      level: 'Experienced',
-      stack: 'B'
-    },
-    {
-      technology: 'Java',
-      level: 'Experienced',
-      stack: 'B'
-    },
-    {
-      technology: 'Unity',
-      level: 'Intermediate',
-      stack: 'B'
-    },
-    {
-      technology: 'HTML',
-      level: 'Experienced',
-      stack: 'F'
-    },
-    {
-      technology: 'CSS',
-      level: 'Intermediate',
-      stack: 'F'
-    },
-    {
-      technology: 'JavaScript',
-      level: 'Intermediate',
-      stack: 'F'
-    },
-    {
-      technology: 'Angular',
-      level: 'Intermediate',
-      stack: 'F'
+      technology: '[technology]',
+      level: '[level]',
+      stack: '[stack]'
     }
   ];
   
-  backendExperiences: ExperienceModel[] = [];
+  backendExperiences: Experience[] = [];
 
-  frontendExperiences: ExperienceModel[] = [];
+  frontendExperiences: Experience[] = [];
 
-  constructor() { }
+  constructor(private service: ExperienceService) { }
 
   ngOnInit(): void {
+    this.experiences = this.service.getExperiences();
     this.backendExperiences = this.experiences.filter(x => x.stack == 'B');
     this.frontendExperiences = this.experiences.filter(x => x.stack == 'F');
   }

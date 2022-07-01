@@ -1,4 +1,4 @@
-export interface AboutModel {
+export interface About {
     image: string;
     description: string;
     yearsOfExperience: number;

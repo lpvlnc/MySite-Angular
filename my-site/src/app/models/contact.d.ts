@@ -1,4 +1,4 @@
-export interface ContactModel {
+export interface Contact {
     icon: string;
     title: string;
     content: string;

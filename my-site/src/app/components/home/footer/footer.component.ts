@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Social } from 'src/app/models/me';
+import { FooterInfo } from 'src/app/models/footer';
+import { FooterService } from 'src/app/services/footer/footer.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,22 +9,21 @@ import { Social } from 'src/app/models/me';
 })
 export class FooterComponent implements OnInit {
 
-  socials: Social[] = [
-    {
-      name: 'LinkedIn',
-      link: 'https://www.linkedin.com/in/lpvalenca/',
-      icon: 'fa-brands fa-linkedin'
-    },
-    {
-      name: 'Github',
-      link: 'https://github.com/lpvlnc/',
-      icon: 'fa-brands fa-github-square'
-    }
-  ];
+  footerInfo: FooterInfo = {
+    tradingName: '[trading-name]',
+    socials: [
+      {
+        name: '[name]',
+        link: '[link]',
+        icon: 'icon'
+      }
+    ]
+  };
   
-  constructor() { }
+  constructor(private service: FooterService) { }
 
   ngOnInit(): void {
+    this.footerInfo = this.service.getFooterInfo();
   }
 
 }

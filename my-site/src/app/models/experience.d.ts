@@ -1,9 +1,9 @@
-export class ExperienceListModel {
-    backendExperiences: ExperienceModel[];
-    frontendExperiences: ExperienceModel[];
+export class ExperienceList {
+    backendExperiences: Experience[];
+    frontendExperiences: Experience[];
 }
 
-export class ExperienceModel {
+export class Experience {
     technology: string;
     level: string;
     stack: string;

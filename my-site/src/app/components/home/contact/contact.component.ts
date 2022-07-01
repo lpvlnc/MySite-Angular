@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactModel } from 'src/app/models/contact';
+import { Contact } from 'src/app/models/contact';
 import { ToastrService } from 'ngx-toastr';
+import { ContactService } from 'src/app/services/contact/contact.service';
 
 @Component({
   selector: 'app-contact',
@@ -9,24 +10,20 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ContactComponent implements OnInit {
 
-  contacts: ContactModel[] = [
+  contacts: Contact[] = [
     {
-    icon: 'fa-solid fa-envelope',
-    title: 'Email',
-    content: 'lpvalenca@hotmail.com',
-    link: 'mailto:lpvalenca@hotmail.com'
-    },
-    {
-      icon: 'fa-brands fa-whatsapp',
-      title: 'Whatsapp',
-      content: '5551993822341',
-      link: 'https://api.whatsapp.com/send?phone=5551993822341'
+      icon: 'fa-solid fa-circle',
+      title: '[title]',
+      content: '[content]',
+      link: '[link]'
     }
   ];
   
-  constructor(private toastr: ToastrService) { }
+  constructor(private service: ContactService,
+              private toastr: ToastrService) { }
 
   ngOnInit(): void {
+    this.contacts = this.service.getContacts();
   }
 
   sendMessage(): void {

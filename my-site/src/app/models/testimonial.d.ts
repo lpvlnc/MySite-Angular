@@ -1,4 +1,4 @@
-export class TestimonialModel {
+export class Testimonial {
     profilePic: string;
     name: string;
     relationship: string;
