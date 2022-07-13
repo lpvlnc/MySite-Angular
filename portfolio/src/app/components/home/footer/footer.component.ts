@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FooterInfo } from 'src/app/models/footer';
+import { FooterInfo, Social } from 'src/app/models/footer';
 import { FooterService } from 'src/app/services/footer/footer.service';
 
 @Component({
@@ -9,21 +9,18 @@ import { FooterService } from 'src/app/services/footer/footer.service';
 })
 export class FooterComponent implements OnInit {
 
-  footerInfo: FooterInfo = {
-    tradingName: '[trading-name]',
-    socials: [
-      {
-        name: '[name]',
-        link: '[link]',
-        icon: 'icon'
-      }
-    ]
-  };
+  socials: Social[] = [
+    {
+      name: '[name]',
+      link: '[link]',
+      icon: 'icon'
+    }
+  ];
   
   constructor(private service: FooterService) { }
 
   ngOnInit(): void {
-    this.footerInfo = this.service.getFooterInfo();
+    this.socials = this.service.getSocials();
   }
 
 }

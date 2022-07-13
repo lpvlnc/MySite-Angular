@@ -16,10 +16,14 @@ export class MeComponent implements OnInit {
     pictureMe: '[image]'
   }
 
-  constructor(private service: MeService) { }
-
-  ngOnInit(): void {
-    this.me = this.service.getMeInfo();
+  constructor(private service: MeService) { 
   }
 
+  ngOnInit(): void {
+    this.service.getMe().subscribe({
+      next: (response: any) => {
+        this.me = response;
+      }
+    });
+  }
 }

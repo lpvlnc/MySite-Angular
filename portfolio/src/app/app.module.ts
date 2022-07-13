@@ -29,7 +29,8 @@ import { NavAdminComponent } from './components/home/nav-admin/nav-admin.compone
 import { ToastrModule } from 'ngx-toastr';
 import { LoginComponent } from './views/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { GlobalHttpInterceptorService } from './services/global-http-interceptor/global-http-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,7 @@ import { HttpClientModule } from '@angular/common/http';
       resetTimeoutOnDuplicate: true
     })
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: GlobalHttpInterceptorService, multi: true  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

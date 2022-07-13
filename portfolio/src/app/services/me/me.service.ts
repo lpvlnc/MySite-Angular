@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Me } from 'src/app/models/me';
 
 @Injectable({
@@ -7,15 +8,13 @@ import { Me } from 'src/app/models/me';
 })
 export class MeService {
 
-  constructor(private http: HttpClient) { }
+  baseUrl = 'https://localhost:7087/';
 
-  getMeInfo(): Me {
-    let me: Me = {
-      name: 'Leonardo Valença',
-      role: 'Fullstack Developer',
-      cv: 'aaa',
-      pictureMe: '../../../assets/me/me.png'
-    }
-    return me;
+  constructor(private http: HttpClient){
+
+  }
+
+  getMe() {
+    return this.http.get(this.baseUrl + 'Me/Get');
   }
 }
