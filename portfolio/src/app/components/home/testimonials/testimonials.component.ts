@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation, ViewChild } from "@angular/core";
 import SwiperCore, { Autoplay, Pagination, Navigation, SwiperOptions, EffectCoverflow } from "swiper";
 import { Testimonial } from "src/app/models/testimonial";
 import { TestimonialService } from "src/app/services/testimonial/testimonial.service";
+import { NgxSpinnerService } from "ngx-spinner";
 
 SwiperCore.use([Autoplay, Navigation, Pagination, EffectCoverflow]);
 
@@ -31,9 +32,17 @@ export class TestimonialsComponent implements OnInit {
     }
   ];
 
-  constructor(private service: TestimonialService) { }
+  constructor(private service: TestimonialService, private spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
-    this.testimonials = this.service.getTestimonials();
+    this.spinner.show();
+    this.service.getTestimonials().subscribe({
+      next: (response: any) => {
+        this.testimonials = response;
+      },
+      complete: () => {
+        this.spinner.hide();
+      }
+    });
   }
 }

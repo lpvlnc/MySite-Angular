@@ -19,16 +19,18 @@ export class GlobalHttpInterceptorService implements HttpInterceptor {
           if (error.error instanceof ErrorEvent) {
             console.error("Error Event");
           } else {
-            this.showOnconsole(error.error);
             switch (error.status) {
                 case 401: //login
-                    break;
+                  this.showOnconsole(error.error);
+                  break;
                 case 403: //forbidden
-                    break;
+                  this.showOnconsole(error.error);
+                  break;
                 case 412: // preconditioned error
                   this.toastr.error(error.error, 'Error');
                   break;
                 case 500:
+                  this.showOnconsole(error.error);
                   break;
             }
           } 

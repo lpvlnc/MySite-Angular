@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { Project } from 'src/app/models/project';
 import { ProjectService } from 'src/app/services/project/project.service';
 
@@ -9,7 +10,7 @@ import { ProjectService } from 'src/app/services/project/project.service';
 })
 export class ProjectComponent implements OnInit {
 
-  constructor(private service: ProjectService) { }
+  constructor(private service: ProjectService, private spinner: NgxSpinnerService) { }
 
   projects: Project[] = [
     {
@@ -23,7 +24,15 @@ export class ProjectComponent implements OnInit {
   ];
 
   ngOnInit(): void {
-    this.projects = this.service.getProjects();
+    this.spinner.show();
+    this.service.getMe().subscribe({
+      next: (response: any) => {
+        this.projects = response;
+      },
+      complete: () => {
+        this.spinner.hide();
+      }
+    });
   }
 
 }

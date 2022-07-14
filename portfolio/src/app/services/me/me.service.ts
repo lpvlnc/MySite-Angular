@@ -2,19 +2,16 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Me } from 'src/app/models/me';
+import { RequestService } from '../request/request.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MeService {
 
-  baseUrl = 'https://localhost:7087/';
-
-  constructor(private http: HttpClient){
-
-  }
+  constructor(private request: RequestService) { }
 
   getMe() {
-    return this.http.get(this.baseUrl + 'Me/Get');
+    return this.request.Request('get', 'Home/GetMe');
   }
 }

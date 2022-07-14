@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -26,11 +26,14 @@ import { ProjectCardOverlayComponent } from './components/home/projects/project-
 import { TestimonialCardComponent } from './components/home/testimonials/testimonial-card/testimonial-card.component';
 import { ContactCardComponent } from './components/home/contact/contact-card/contact-card.component';
 import { NavAdminComponent } from './components/home/nav-admin/nav-admin.component';
-import { ToastrModule } from 'ngx-toastr';
 import { LoginComponent } from './views/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { GlobalHttpInterceptorService } from './services/global-http-interceptor/global-http-interceptor.service';
+
+// ngx
+import { ToastrModule } from 'ngx-toastr';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -76,9 +79,11 @@ import { GlobalHttpInterceptorService } from './services/global-http-interceptor
       includeTitleDuplicates: true,
       countDuplicates: true,
       resetTimeoutOnDuplicate: true
-    })
+    }),
+    NgxSpinnerModule.forRoot({ type: 'ball-spin-clockwise' })
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: GlobalHttpInterceptorService, multi: true  }],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { FooterInfo, Social } from 'src/app/models/footer';
 import { FooterService } from 'src/app/services/footer/footer.service';
 
@@ -17,10 +18,19 @@ export class FooterComponent implements OnInit {
     }
   ];
   
-  constructor(private service: FooterService) { }
+  constructor(private service: FooterService, private spinner: NgxSpinnerService) { 
+  }
 
   ngOnInit(): void {
-    this.socials = this.service.getSocials();
+    this.spinner.show();
+    this.service.getSocials().subscribe({
+      next: (response: any) => {
+        this.socials = response;
+      },
+      complete: () => {
+        this.spinner.hide();
+      }
+    });
   }
 
 }

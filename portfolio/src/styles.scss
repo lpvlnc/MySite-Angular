@@ -18,18 +18,18 @@
 
 :root {
     // color
-    --color-bg: #02021a;
+    --color-bg: #020218;
     --color-primary: hsla(0, 0%, 0%, 0.300);
-    --color-primary-base: hsla(0, 0%, 0%, 0.9);
-    --color-secondary: hsla(0, 0%, 0%, 0.100);
+    --color-primary-base: rgba(0, 0, 0, 0.9);
+    --color-secondary: rgba(0, 0, 0, 0.1);
     --color-primary-variant: rgba(77, 181, 255, 0.4);
     --color-white: #ffffff;
     --color-light: rgba(255, 255, 255, 0.6);
     --color-disabled: rgba(255, 255, 255, 0.2);
 
     // color background blur
-    --color-bg-blur-black: hsla(240, 77%, 5%, 0.300);
-    --color-bg-blur-aqua: hsla(180, 100%, 50%, 0.300);
+    --color-bg-blur-black: rgba(3, 3, 23, 0.3);
+    --color-bg-blur-aqua: rgba(0, 255, 255, 0.3);
     --color-bg-blur-pink: hsla(283, 100%, 50%, 0.300);
 
     --transition: all 400ms ease;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { About } from 'src/app/models/about';
 import { AboutService } from 'src/app/services/about/about.service';
 
@@ -17,9 +18,17 @@ export class AboutComponent implements OnInit {
     projects: 0
   }
 
-  constructor(private service: AboutService) { }
+  constructor(private service: AboutService, private spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
-    this.about = this.service.getAbout();
+    this.spinner.show();
+    this.service.getAbout().subscribe({
+      next: (response: any) => {
+        this.about = response;
+      },
+      complete: () => {
+        this.spinner.hide();
+      }
+    });
   }
 }

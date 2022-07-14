@@ -1,26 +1,16 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FooterInfo, Social } from 'src/app/models/footer';
+import { RequestService } from '../request/request.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FooterService {
 
-  constructor() { }
+  constructor(private request: RequestService) { }
 
-  getSocials(): Social[] {
-    let socials: Social[] = [
-      {
-        name: 'LinkedIn',
-        link: 'https://www.linkedin.com/in/lpvalenca/',
-        icon: 'fa-brands fa-linkedin'
-      },
-      {
-        name: 'Github',
-        link: 'https://github.com/lpvlnc/',
-        icon: 'fa-brands fa-github-square'
-      }
-    ];
-    return socials;
+  getSocials() {
+    return this.request.Request('get', 'Socials/Get');
   }
 }

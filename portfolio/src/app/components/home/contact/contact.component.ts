@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Contact } from 'src/app/models/contact';
 import { ToastrService } from 'ngx-toastr';
 import { ContactService } from 'src/app/services/contact/contact.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-contact',
@@ -20,10 +21,19 @@ export class ContactComponent implements OnInit {
   ];
   
   constructor(private service: ContactService,
-              private toastr: ToastrService) { }
+              private toastr: ToastrService, 
+              private spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
-    this.contacts = this.service.getContacts();
+    this.spinner.show();
+    this.service.getContacts().subscribe({
+      next: (response: any) => {
+        this.contacts = response;
+      },
+      complete: () => {
+        this.spinner.hide();
+      }
+    });
   }
 
   sendMessage(): void {

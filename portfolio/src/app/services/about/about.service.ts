@@ -1,21 +1,16 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { About } from '../../models/about';
+import { RequestService } from '../request/request.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AboutService {
 
-  constructor() { }
+  constructor(private request: RequestService) { }
 
-  getAbout() : About {
-    let about: About = {
-      pictureAbout: '../../../../assets/me/me-about.jpg',
-      about: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro reprehenderit exercitationem dolor, pariatur quasi incidunt quisquam nihil alias at fugit, nostrum iste corporis voluptate itaque excepturi labore dolorum delectus accusamus.',
-      yearsOfExperience: 1,
-      clients: 0,
-      projects: 0
-    }
-    return about;
+  getAbout() {
+    return this.request.Request('get', 'Home/GetAbout');
   }
 }
