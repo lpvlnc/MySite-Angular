@@ -34,6 +34,7 @@ import { GlobalHttpInterceptorService } from './services/global-http-interceptor
 // ngx
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { ManagamentComponent } from './views/managament/managament.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     TestimonialCardComponent,
     ContactCardComponent,
     NavAdminComponent,
-    LoginComponent
+    LoginComponent,
+    ManagamentComponent
   ],
   imports: [
     BrowserModule,
