@@ -9,7 +9,7 @@ export type RequestMethod = 'get' | 'post' | 'put' | 'delete';
 })
 export class RequestService implements OnDestroy {
 
-  baseUrl = 'https://leonardovalenca.azurewebsites.net/';
+  baseUrl = 'https://leonardovalenca-api.azurewebsites.net/';
 
   private subscriptions: Subscription = new Subscription(() => { });
 
