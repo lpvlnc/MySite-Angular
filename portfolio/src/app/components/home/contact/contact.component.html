@@ -14,18 +14,18 @@
             </div>
         </div>
         <div class='col-12 col-md-8'>
-            <form action=''>
-                <div class='col-12'>
-                    <input class='p-2' type='text' name='name' placeholder='Your full name' required/>
+            <form [formGroup]="form">
+                <div class='col-12 mt-3 mt-md-0'>
+                    <input class='p-2' type='text' name='name' formControlName="name" placeholder='Your full name'/>
                 </div>
                 <div class='col-12'>
-                    <input class='p-2' type='email' name='email' placeholder='Your email' required/>
+                    <input class='p-2' type='email' name='email' formControlName="email" placeholder='Your email'/>
                 </div>
                 <div class='col-12'>
-                    <textarea class='p-2' name='message' rows='7' placeholder='Your message' required></textarea>
+                    <textarea class='p-2' name='message' formControlName="message" rows='7' placeholder='Your message'></textarea>
                 </div>
                 <div class='col-12 d-flex justify-content-end'>
-                    <app-button class='btn p-0' label='Send message' customButton='primary' (click)='sendMessage()'></app-button>
+                    <app-button class='btn p-0' label='Send message' customButton='primary' (click)='sendMessage()' [disabled]="!form.valid"></app-button>
                 </div>
             </form>
         </div>
