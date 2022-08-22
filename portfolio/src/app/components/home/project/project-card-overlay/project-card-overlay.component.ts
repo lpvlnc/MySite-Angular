@@ -16,9 +16,13 @@ export class ProjectCardOverlayComponent implements OnInit {
     build: '',
     image: ''
   };
+
+  detailLink: string = '';
+  
   constructor() { }
 
   ngOnInit(): void {
+    this.detailLink = 'http://localhost:4200/project-detail/' + this.project.id;
   }
 
   disableGithub(): boolean {

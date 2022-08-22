@@ -12,7 +12,7 @@ export class NavAdminComponent implements OnInit {
 
   loggedIn: boolean = true;
   active: boolean = false;
-  public name: string = 'Leonardo Valença';
+  public name: string = 'Guest';
 
   constructor(private toastr: ToastrService,
               private router: Router) { }

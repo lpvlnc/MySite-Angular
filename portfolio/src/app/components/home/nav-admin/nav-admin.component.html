@@ -1,14 +1,14 @@
 <app-button *ngIf='!loggedIn' class='btn login-button' label='Login' customButton='secondary' icon='fa-solid fa-arrow-right-to-bracket' (click)='openLoginPage()'></app-button>
 
-<div *ngIf='loggedIn' class='navigation' [ngClass]="{'active' : active}">
+<nav ngxHideOnScroll [classNameWhenHidden]="'navigation-hidden'" *ngIf='loggedIn' class='navigation' [ngClass]="{ 'active' : active }">
     <div class='user'>
         <div class='img'>
-            <img src='../../../../assets/me/me-about.jpg' alt=''>
+            <img src='../../../../assets/details//profile-picture-placeholder.png' alt=''>
         </div>
         <p class='name'>{{name}}</p>
     </div>
     <div class='toggle' (click)='toggle()'></div>
-    <ul class='menu'>
+    <ul class='menu' *ngIf="loggedIn">
         <hr class='mb-2'>
         <li>
             <a (click)='openDashboard()'>
@@ -35,4 +35,4 @@
             </a>
         </li>
     </ul>
-</div>
+</nav>

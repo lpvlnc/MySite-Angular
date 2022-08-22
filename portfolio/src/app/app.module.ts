@@ -20,9 +20,9 @@ import { MeIntroductionComponent } from './components/home/me/me-introduction/me
 import { MeDetailsComponent } from './components/home/me/me-details/me-details.component';
 import { AboutCardComponent } from './components/home/about/about-card/about-card.component';
 import { ExperienceCardComponent } from './components/home/experience/experience-card/experience-card.component';
-import { ProjectComponent } from './components/home/projects/projects.component';
-import { ProjectCardComponent } from './components/home/projects/project-card/project-card.component';
-import { ProjectCardOverlayComponent } from './components/home/projects/project-card-overlay/project-card-overlay.component';
+import { ProjectComponent } from './components/home/project/project.component';
+import { ProjectCardComponent } from './components/home/project/project-card/project-card.component';
+import { ProjectCardOverlayComponent } from './components/home/project/project-card-overlay/project-card-overlay.component';
 import { TestimonialCardComponent } from './components/home/testimonials/testimonial-card/testimonial-card.component';
 import { ContactCardComponent } from './components/home/contact/contact-card/contact-card.component';
 import { NavAdminComponent } from './components/home/nav-admin/nav-admin.component';
@@ -35,6 +35,8 @@ import { GlobalHttpInterceptorService } from './services/global-http-interceptor
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ManagamentComponent } from './views/managament/managament.component';
+import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
+import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +61,8 @@ import { ManagamentComponent } from './views/managament/managament.component';
     ContactCardComponent,
     NavAdminComponent,
     LoginComponent,
-    ManagamentComponent
+    ManagamentComponent,
+    ProjectDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -82,7 +85,8 @@ import { ManagamentComponent } from './views/managament/managament.component';
       countDuplicates: true,
       resetTimeoutOnDuplicate: true
     }),
-    NgxSpinnerModule.forRoot({ type: 'ball-spin-clockwise' })
+    NgxSpinnerModule.forRoot({ type: 'ball-spin-clockwise' }),
+    NgxHideOnScrollModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: GlobalHttpInterceptorService, multi: true  }],
   bootstrap: [AppComponent],
